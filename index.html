@@ -1,37 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>intro javascript || 25/09/2025</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body>
-<main>
-    <!--
-TALLER DE EJERCICIOS JS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    PROGRAMACION WEB :
-    profe: jossy tello
-    aplicar las fundamentos de lenguaje javascript realizando ejercicios.
--->
-    <section class="grid">
-        <p></p>
-        <section class="grid-cols-2"></section>
-        <section class="grid-cols-4"></section>
-    </section>
-</main>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="px-1">
+    <nav class="navbar navbar-expand-sm bg-body-tertiary " id="retorno">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#retorno">LuisDaniel <i class="bi bi-person-hearts"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Salario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Area</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="">Alumnos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="text-center  mt-5">
+            <h1>TALLER DE EJERCICIOS JS</h1>
+            
+        </section>
+
+
+        <section class="contener w-75 m-auto border rounded " id="calculator">
+            <span style="font-size: 0.78em;" class="ps-2">calculadora interactiva</span>
+            <section class="rounded-4 w-75 border text-center  mx-auto my-3 fs-5">
+                <p>resultado</p>
+            </section>
+
+            <section class="row d-flex  mx-auto my-3 gap-2">
+                <section class="row d-flex gap-1 justify-content-center m-auto ">
+                    <button class="text-center fw-bold col rounded">Salario</button>
+                    <button class="text-center fw-bold col rounded">producto</button>
+                    <button class="text-center fw-bold col rounded">Notas</button>
+                    <button class="text-center fw-bold col rounded">Area</button>
+                    <button class="text-center fw-bold col rounded">Alumnos</button>
+                </section>
+                <section class=" row d-flex  gap-1 justify-content-center m-auto">
+                    <button class="text-center fw-bold col rounded">7</button>
+                    <button class="text-center fw-bold col rounded">8</button>
+                    <button class="text-center fw-bold col rounded">9</button>
+                    <button class="text-center fw-bold col rounded">+</button>
+                </section>
+                <section class=" row  d-flex  gap-1 justify-content-center m-auto">
+                    <button class="text-center fw-bold col rounded">4</button>
+                    <button class="text-center fw-bold col rounded">5</button>
+                    <button class="text-center fw-bold col rounded">6</button>
+                    <button class="text-center fw-bold col rounded">-</button>
+                </section>
+                <section class="row d-flex  gap-1 justify-content-center m-auto">
+                    <button class="text-center fw-bold col rounded">1</button>
+                    <button class="text-center fw-bold col rounded">2</button>
+                    <button class="text-center fw-bold col rounded">3</button>
+                    <button class="text-center fw-bold col rounded">x</button>
+                </section>
+                <section class="row d-flex  gap-1 justify-content-center m-auto">
+                    <button class="text-center fw-bold col rounded">0</button>
+                    <button class="text-center fw-bold col rounded"><i class="bi bi-backspace-fill"></i></button>
+                    <button class="text-center fw-bold col rounded">=</button>
+                    <button class="text-center tw-bold col rounded"><i class="bi bi-dot"></i></button>
+                </section>
+            </section>
+
+        </section>
+
+        <section id="description">
+            <h2>Nota:</h2>
+            <p>aplicar las fundamentos de lenguaje javascript realizando ejercicios.</p>
+            <h3>preguntas</h3>
+            <p>1: calcular el salario de un empleado que gana X monto
+                descuente el 4% en salud y 5% en pension </p>
+            <p>2: aplique la formula a=(b*h)/2 para calcular el area de un triangulo donde sus dimenciones
+                base y altura se deben pedir al usuario que los digite</p>
+            <p>3: realize las operaciones de sumar , restar , multiplicar , divicion y modulo
+                pidiendole solo dos numeros</p>
+            <p>4: calcule el sueldo mensual de un trabajador ingresando el numero de
+                horas trabajadas en el mes y el valor tanto de las horas normales
+                de trabajos y las horas extras</p>
+            <p>5: digite el ingreso del precio de un producto y se debe calcular el iva,
+                mostrar cuanto es el iva que se agrega, mostrar el precio del producto
+                sin iva y el total a pagar</p>
+            <p>6: calcule el porcentaje de alumnos de un salon de clases , digitando el total de alumnos
+                hombre y mujeres </p>
+            <p>7: calcule el promedio de 3 notas de un alumno , el rango de cada nota es del 1 al 5</p>
+        </section>
+
+    </main>
+    <footer class="border-top pt-2 row ">
+        <section class="col-sm-10 col-md-6 col-lg-4 text-center my-2">
+            <a class="text-decoration-none text-black" href="https://github.com/luisda-291105" >Git hub <i class="bi bi-github"></i>
+            luis daniel perex pinedo</a>
+            <p>WhatsAap: 3107378636</p>
+            <p>ese tambien es mi nequi por si quieren donar para la causa <i class="bi bi-currency-dollar"></i></p>
+        </section>
+        <section class="col-sm-10 col-md-6 col-lg-4 text-center my-2">
+            
+            <ul class="list-unstyled">
+                <li><a class="text-decoration-none text-black" href="#retorno">Inicio</a></li>
+                <li><a class="text-decoration-none text-black" href="#calculator">Calculadora</a></li>
+                <li><a class="text-decoration-none text-black" href="#description">Nota</a></li>
+            </ul>
+        </section>
+        <section class="col-sm-10 col-md-6 col-lg-4 text-center my-2">
+            <ul class="list-unstyled">
+                <li><a class="text-decoration-none text-black" href="">Calcular salario</a></li>
+                <li><a class="text-decoration-none text-black" href="">calcular iva de producto</a></li>
+                <li><a class="text-decoration-none text-black" href="">promedio de alumnos</a></li>
+                <li><a class="text-decoration-none text-black" href="">promedio de notas</a></li>
+                <li><a class="text-decoration-none text-black" href="">Calcular el area de un triangulo</a></li>
+            </ul>
+        </section>
+        <section class="col-sm-10 col-md-6 col-lg-4 text-center my-2">
+            <p>PROGRAMACION WEB :</p>
+            <p>profe: jossy tello</p>
+            <p>clases jueves noche </p>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
     <!-- ---------------employee---pregunta 1 - 4 ------------ -->
-<!-- <script src="employee.js"></script> -->
+    <!-- <script src="employee.js"></script> -->
 
     <!-- ---------------calculator-----pregunta 2 - 3 ---------- -->
-<!-- <script src="calculator.js"></script> -->
+    <!-- <script src="calculator.js"></script> -->
 
     <!-- ---------ventas ----pregunta 5 -->
     <!-- <script src="sell.js"></script> -->
 
-        <!-- ---------notas y ventas ----pregunta  6 -7 -->
+    <!-- ---------notas ----pregunta  6 -7 -->
     <!-- <script src="calification.js"></script> -->
 </body>
+
 </html>
