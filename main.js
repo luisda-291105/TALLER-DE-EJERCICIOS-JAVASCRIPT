@@ -1,11 +1,6 @@
 let calculadora = document.querySelector("#calculator");
 let resultado = document.querySelector("#resultado");
-let contenerBtn = document.getElementById("contenerBtn")
-let numero1 = contenerBtn.getAttribute('data-valor');
-let operador = contenerBtn.getAttribute("operacion")
-
-resultado.textContent = numero1;
-
+let contenerBtn = document.getElementById("contenerBtn");
 
 function Sumar() {
     return numero1 + numero2;
