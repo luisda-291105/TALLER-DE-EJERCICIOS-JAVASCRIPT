@@ -8,20 +8,22 @@
 </head>
 
 <body>
-    
-        <input type="number" name="" id="numero1" placeholder="numero qui">
-        <input type="number" name="" id="numero2" placeholder="numero qui">
-        <select name="" id="operacion">
-            <option value="1">sumar</option>
-            <option value="2">resta</option>
-            <option value="3">dividir</option>
-            <option value="4">multiplicar</option>
-            <option value="5">salir</option>
-        </select>
-        <p id="resultado">resultado</p>
-        <button id="btn">calcular</button>
 
-    <script >
+    <input type="number" id="numero1" placeholder="numero qui">
+    <input type="number" id="numero2" placeholder="numero qui">
+
+    <select id="operacion">
+        <option value="1">sumar</option>
+        <option value="2">resta</option>
+        <option value="3">dividir</option>
+        <option value="4">multiplicar</option>
+        <option value="5">salir</option>
+    </select>
+
+    <button id="btn">calcular</button>
+    <button onclick="limpiar()">limpiar</button>
+    <p id="resultado">resultado: </p>
+    <script>
         /*
 1) Realizar una función que nos permita realizar las 4 operaciones 
 aritméticas, es decir, que nos permita sumar, restar, dividir y
@@ -31,53 +33,56 @@ Si el parámetro de la operación no es válido que mande un error
 personalizado a la consola.
 */
 
-let numero1 , numero2 , operacion, resultado ;
 
+        let n1 = document.getElementById("numero1");
+        let n2 = document.getElementById("numero2");
+        let operacion = document.getElementById("operacion");
+        let r = document.getElementById("resultado");
+        let btn = document.getElementById("btn");
 
-operacion = document.getElementById("operacion");
-numero1 = document.getElementById("numero1");
-numero2 = document.getElementById("numero2");
-resultado = document.getElementById("resultado");
-btn = document.getElementById("btn");
+        function suma(n1 , n2) {
+            return n1 + n2;
+        }
+        function resta(n1 , n2) {
+            return n1 - n2;
+        }
+        function dividir(n1 , n2) {
+            return n1 / n2;
+        }
+        function multiplicar(n1 , n2) {
+            return n1 * n2;
+        }
 
-function suma(){
-    resultado = numero1 + numero2;
-    return resultado ;
-}
-function resta(){
-    return numero1 - numero2;
-}
-function dividir(){
-    return numero1 / numero2;
-}
-function multiplicar(){
-    return numero1 * numero2;
-}
+        function limpiar() {
+            resultado.textContent = "resultado:";
+        }
 
-btn.addEventListener('click', () => {
-    // let numero1 = Number(numero1.value);
-    // let numero2 = Number(numero2.value);
-    // let resultado;
-    switch (operacion.value){
-        case "1" : 
-            suma(numero1 , numero2);
-            break;
-        case "2" : 
-            resultado = resta(numero1 , numero2);
-            break;
-        case "3" : 
-            resultado = dividir(numero1 , numero2);
-            break;
-        case "4" : 
-            resultado = multiplicar(numero1 , numero2);
-            break;
-        case "5" : 
-            alert("saliendo");
-            break;
-        default :
-        console.log("algo salio mal");
-    }
-});
+        btn.addEventListener('click', () => {
+            let a = Number(n1.value);
+            let b= Number(n2.value);
+            let resul;
+            switch (operacion.value) {
+                case "1":
+                    resul = suma(a , b);
+                    break;
+                case "2":
+                    resul = resta(a , b);
+                    break;
+                case "3":
+                    resul = dividir(a , b);
+                    break;
+                case "4":
+                    resul = multiplicar(a , b);
+                    break;
+                case "5":
+                    resul = ("saliendo");
+                    break;
+                default:
+                    console.log("algo salio mal");
+            }
+            r.textContent = (`el resultado de la ${operacion} es: ${resul}`)
+        });
+
     </script>
 </body>
 

@@ -1,36 +1,38 @@
-let calculadora = document.querySelector("#calculator");
-let resultado = document.querySelector("#resultado");
-let contenerBtn = document.getElementById("contenerBtn")
-let numero1 = contenerBtn.getAttribute('data-valor');
-let operador = contenerBtn.getAttribute("operacion")
+let operador = document.getElementById("operacion");
+let botonIgual = document.getElementById("botonIgual");
 
-resultado.textContent = numero1;
+let imput1 = document.getElementById("numeros2");
+let imput2 = document.getElementById("numeros1");
+let resultado = document.getElementById("resultado");
+
+let boton = document.getElementById("boton");
 
 
-function Sumar() {
-    return numero1 + numero2;
+
+function Sumar(imput1, imput2) {
+    return imput2 + imput1;
 }
 
-function restar() {
-    return numero1 - numero2;
+function restar(imput1, imput2) {
+    return imput2 - imput1;
 }
 
-function multiplicar() {
-    return numero1 * numero2;
+function multiplicar(imput1, imput2) {
+    return imput2 * imput1;
 }
 
-function divide() {
+function divide(imput1, imput2) {
 
     if (numero2 != 0) {
-        return numero1 / numero2;
+        return imput2 / imput1;
     } else {
         alert("no puedes dividir entre cero '0'")
     }
 
 }
 
-function mod() {
-    resultado = numero1 % numero2;
+function mod(imput1, imput2) {
+    return imput1 % imput2;
 }
 
 function limpiar() {
@@ -111,23 +113,39 @@ function notas() {
     resultado.textContent = ("el promedio de la nota del alumno es: " + promedio)
 }
 
-function calculate() {
+// tengo poblemas al recolectar los botones al recojer numeros y operaciones , menos igual y con funciones fijas
 
-    switch (operador) {
-        case "+":
-            Sumar();
+botonIgual.addEventListener('click', () => {
+
+    let n1 = Number(imput1.value);
+    let n2 = Number(imput2.value);
+    let r;
+    switch (operador.value) {
+        case "suma":
+            r = Sumar(n1, n2);
             break
-        case "-":
-            restar()
+        case "resta":
+            r = restar(n1, n2)
             break
-        case "*":
-            multiplicar();
+        case "multiplicar":
+            r = multiplicar(n1, n2);
             break
-        case "/":
-            divide()
+        case "divicion":
+            r = divide(n1, n2)
             break
-        case "%":
-            mod();
+        case "modulo":
+            r = mod(n1, n2);
         default: alert("intenta de nuevo");
     }
-}
+    resultado.textContent = "el resultado de " + operador + " es: " + r;
+})
+
+// boton.addEventListener('click', () => {
+//     let n1 = Number(imput1.value);
+//     let n2 = Number(imput2.value);
+//     let r;
+
+//     r = Sumar(n1 , n2)
+
+//     resultado.textContent = " resultado "+r;
+// })

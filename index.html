@@ -52,46 +52,57 @@
         <section class="contener w-75 m-auto border rounded my-4 " id="calculator">
             <span style="font-size: 0.78em;" class="ps-2 modoCalculator">calculadora interactiva</span>
             <section class="rounded-4 w-75 border text-center  mx-auto my-3 fs-5">
+                <input type="number" id="numeros1" placeholder="numeros2" class="rounded text-center">
+                <input type="number" id="numeros2" placeholder="numeros1" class="rounded text-center">
+                <select name="" id="operacion">
+                    <option value="suma">suma</option>
+                </select>
+                <!--<button id="boton">igual</button> -->
                 <p id="resultado">resultado</p>
-                <!-- <input type="text" name="resultado" id="resultado" placeholder="resultado" class="rounded text-center"> -->
-
             </section>
 
-            <section class="row d-flex  mx-auto my-3 gap-2" id="contenerBtn">
+            <section class="row d-flex  mx-auto my-3 gap-2" id="operacion">
                 <section class="row d-flex gap-1 justify-content-center m-auto filasBotones">
-                    <button class="text-center fw-bold col rounded funcion" onclick="calculateSalary()" data-accion="calcularSalario_salud_pension">Salario salud y pension</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="product()" data-accion="calcularProducto">producto con iva</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="notas()" data-accion="calcularNotas">Notas</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="calculateSalary()"
+                        data-accion="calcularSalario_salud_pension">Salario salud y pension</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="product()"
+                        data-accion="calcularProducto">producto con iva</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="notas()"
+                        data-accion="calcularNotas">Notas</button>
                 </section>
-                
-                <section class=" row d-flex  gap-1 justify-content-center m-auto filasBotones">
-                    <button class="text-center fw-bold col rounded funcion" onclick="areaTriangulo()" data-accion="calcularAria">Area</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="alumnos()" data-accion="promedioAlumnos">Alumnos</button>
-                    <button class="text-center fw-bold col rounded operacion"data-valor="%">%</button>
+
+                <section class=" row d-flex  gap-1 justify-content-center m-auto ">
+                    <button class="text-center fw-bold col rounded funcion" onclick="areaTriangulo()"
+                        data-accion="calcularAria">Area</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="alumnos()"
+                        data-accion="promedioAlumnos">Alumnos</button>
+                    <button class="text-center fw-bold col rounded operacion" value="modulo">%</button>
                 </section>
-                <section class=" row d-flex  gap-1 justify-content-center m-auto filasBotones">
+                <section class=" row d-flex  gap-1 justify-content-center m-auto ">
                     <button class="text-center fw-bold col rounded numeros  " data-valor="7">7</button>
                     <button class="text-center fw-bold col rounded numeros  " data-valor="8">8</button>
                     <button class="text-center fw-bold col rounded numeros  " data-valor="9">9</button>
-                    <button class="text-center fw-bold col rounded operacion" data-operacion="+">+</button>
+                    <button class="text-center fw-bold col rounded operacion" value="suma">+</button>
                 </section>
-                <section class=" row  d-flex  gap-1 justify-content-center m-auto filasBotones">
+                <section class=" row  d-flex  gap-1 justify-content-center m-auto ">
                     <button class="text-center fw-bold col rounded numeros  " data-valor="4">4</button>
                     <button class="text-center fw-bold col rounded numeros  " data-valor="5">5</button>
                     <button class="text-center fw-bold col rounded numeros  " data-valor="6">6</button>
-                    <button class="text-center fw-bold col rounded operacion" data-operacion="-">-</button>
+                    <button class="text-center fw-bold col rounded operacion" value="resta">-</button>
                 </section>
-                <section class="row d-flex  gap-1 justify-content-center m-auto filasBotones">
-                    <button class="text-center fw-bold col rounded numeros  " data-valor="1">1</button>
-                    <button class="text-center fw-bold col rounded numeros  " data-valor="2">2</button>
-                    <button class="text-center fw-bold col rounded numeros  " data-valor="3">3</button>
-                    <button class="text-center fw-bold col rounded operacion" data-operacion="*">x</button>
+                <section class="row d-flex  gap-1 justify-content-center m-auto ">
+                    <button class="text-center fw-bold col rounded numeros  " value="1" data-valor="1">1</button>
+                    <button class="text-center fw-bold col rounded numeros  " value="2" data-valor="2">2</button>
+                    <button class="text-center fw-bold col rounded numeros  " value="3" data-valor="3">3</button>
+                    <button class="text-center fw-bold col rounded operacion" value="multiplicar">x</button>
                 </section>
-                <section class="row d-flex  gap-1 justify-content-center m-auto filasBotones">
+                <section class="row d-flex  gap-1 justify-content-center m-auto ">
                     <button class="text-center fw-bold col rounded numeros  " data-valor="0">0</button>
-                    <button class="text-center fw-bold col rounded operacion" onclick="limpiar()" data-accion="eliminar"><i class="bi bi-backspace-fill"></i></button>
-                    <button class="text-center fw-bold col rounded operacion" onclick="" data-operacion="respuesta">=</button>
-                    <button class="text-center tw-bold col rounded operacion" onclick="" data-operacion="/"> ÷</button>
+                    <button class="text-center fw-bold col rounded operacion" onclick="limpiar()"
+                        data-accion="eliminar"><i class="bi bi-backspace-fill"></i></button>
+                    <button class="text-center fw-bold col rounded operacion" id="botonIgual"
+                        data-operacion="respuesta">=</button>
+                    <button class="text-center tw-bold col rounded operacion" value="divicion"> ÷</button>
                 </section>
             </section>
         </section>
