@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        <input type="number" name="" id="numero1" placeholder="numero qui">
+        <input type="number" name="" id="numero2" placeholder="numero qui">
+        <select name="" id="operacion">
+            <option value="1">sumar</option>
+            <option value="2">resta</option>
+            <option value="3">dividir</option>
+            <option value="4">multiplicar</option>
+            <option value="5">salir</option>
+        </select>
+        <p id="resultado">resultado</p>
+        <button id="btn">calcular</button>
+
+    <script >
+        /*
+1) Realizar una función que nos permita realizar las 4 operaciones 
+aritméticas, es decir, que nos permita sumar, restar, dividir y
+multiplicar. La función debe recibir 3 parámetros, dos de ellos deben 
+ser los valores (a y b) y uno el nombre de la operación (en minúsculas). 
+Si el parámetro de la operación no es válido que mande un error 
+personalizado a la consola.
+*/
+
+let numero1 , numero2 , operacion, resultado ;
+
+
+operacion = document.getElementById("operacion");
+numero1 = document.getElementById("numero1");
+numero2 = document.getElementById("numero2");
+resultado = document.getElementById("resultado");
+btn = document.getElementById("btn");
+
+function suma(){
+    resultado = numero1 + numero2;
+    return resultado ;
+}
+function resta(){
+    return numero1 - numero2;
+}
+function dividir(){
+    return numero1 / numero2;
+}
+function multiplicar(){
+    return numero1 * numero2;
+}
+
+btn.addEventListener('click', () => {
+    // let numero1 = Number(numero1.value);
+    // let numero2 = Number(numero2.value);
+    // let resultado;
+    switch (operacion.value){
+        case "1" : 
+            suma(numero1 , numero2);
+            break;
+        case "2" : 
+            resultado = resta(numero1 , numero2);
+            break;
+        case "3" : 
+            resultado = dividir(numero1 , numero2);
+            break;
+        case "4" : 
+            resultado = multiplicar(numero1 , numero2);
+            break;
+        case "5" : 
+            alert("saliendo");
+            break;
+        default :
+        console.log("algo salio mal");
+    }
+});
+    </script>
+</body>
+
+</html>
