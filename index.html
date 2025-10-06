@@ -50,12 +50,12 @@
             <p class="modoCalculator">modo calculo basico</p>
         </section>
 
+        <!-- taller numero 1 -->
         <section class="row justify-content-center my-5">
 
-            <!-- taller numero 1 -->
+            <!-- titulo y preguntas del taller numero 1 -->
             <section class=" col-sm-12 col-md-6 col-lg-6">
                 <h2>Taller 1</h2>
-                <!-- preguntas del taller numero 1 -->
                 <ol class="d-flex flex-column gap-2">
                     <li>calcular el salario de un empleado que gana X monto
                         descuente el 4% en salud y 5% en pension </li>
@@ -86,13 +86,17 @@
             <!-- calculadora del taller numero 1-->
             <section class=" col-sm-12 col-md-6 col-lg-6">
                 <div class="border rounded p-3" id="calculator">
-                    <span style="font-size: 0.78em;" class="ps-2 modoCalculator">calculadora interactiva</span>
+                    <span style="font-size: 0.78em;" class="ps-2 ">calculadora interactiva</span>
+
+                    <!-- salida (resultado) -->
                     <section class="rounded-4 w-100 border text-center mx-auto my-3 fs-5 p-2">
                         <p id="resultado">resultado</p>
                     </section>
 
+                    <!-- botones del la calculadora -->
                     <section class="row g-2 mx-auto" id="contenerBtn">
-                        <section class="row g-1 m-auto filasBotones">
+                        <!-- funciones productos , notas , salario -->
+                        <section class="row g-1 m-auto ">
                             <div class="col-4">
                                 <button class="btn btn-outline-primary w-100 fw-bold funcion"
                                     onclick="calculateSalary()"
@@ -108,63 +112,68 @@
                             </div>
                         </section>
 
-                        <section class="row g-1 m-auto filasBotones">
+                        <!-- funciones aria del triangulo , alumnos , y la operacion modulo -->
+                        <section class="row g-1 m-auto ">
                             <div class="col-4">
-                                <button class="btn btn-outline-primary w-100 fw-bold funcion" onclick="areaTriangulo()"
+                                <button class="btn btn-outline-primary w-100 fw-bold " onclick="areaTriangulo()"
                                     data-accion="calcularAria">Area</button>
                             </div>
                             <div class="col-4">
-                                <button class="btn btn-outline-primary w-100 fw-bold funcion" onclick="alumnos()"
+                                <button class="btn btn-outline-primary w-100 fw-bold " onclick="alumnos()"
                                     data-accion="promedioAlumnos">Alumnos</button>
                             </div>
                             <div class="col-4">
-                                <button class="btn btn-outline-secondary w-100 fw-bold operacion"
+                                <button class="btn btn-outline-secondary w-100 fw-bold "
                                     data-valor="%">%</button>
                             </div>
                         </section>
 
-                        <section class="row g-1 m-auto filasBotones">
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                        <!-- operacion sumar y numeros 7 , 8 , 9 -->
+                        <section class="row g-1 m-auto ">
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold "
                                     data-valor="7">7</button></div>
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold "
                                     data-valor="8">8</button></div>
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold "
                                     data-valor="9">9</button></div>
-                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold operacion"
+                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold "
                                     data-operacion="+">+</button></div>
                         </section>
 
-                        <section class="row g-1 m-auto filasBotones">
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                        <!-- operacion restar y numeros 4 , 5 , 6 -->
+                        <section class="row g-1 m-auto ">
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold  "
                                     data-valor="4">4</button></div>
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold  "
                                     data-valor="5">5</button></div>
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold  "
                                     data-valor="6">6</button></div>
-                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold operacion"
+                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold  "
                                     data-operacion="-">-</button></div>
                         </section>
 
-                        <section class="row g-1 m-auto filasBotones">
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                        <!-- operacion multiplicar y numeros 1 , 2 , 3 -->
+                        <section class="row g-1 m-auto ">
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold  "
                                     data-valor="1">1</button></div>
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold  "
                                     data-valor="2">2</button></div>
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold  "
                                     data-valor="3">3</button></div>
-                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold operacion"
-                                    data-operacion="*">×</button></div>
+                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold  "
+                                    data-operacion="*">x</button></div>
                         </section>
 
-                        <section class="row g-1 m-auto filasBotones">
-                            <div class="col-3"><button class="btn btn-light w-100 fw-bold numeros"
+                        <!-- funcion limpiar , operador igual y dividir , numero 0 -->
+                        <section class="row g-1 m-auto ">
+                            <div class="col-3"><button class="btn btn-light w-100 fw-bold  "
                                     data-valor="0">0</button></div>
-                            <div class="col-3"><button class="btn btn-outline-danger w-100 fw-bold operacion"
+                            <div class="col-3"><button class="btn btn-outline-danger w-100 fw-bold  "
                                     onclick="limpiar()" data-accion="eliminar"><i
                                         class="bi bi-backspace-fill"></i></button></div>
-                            <div class="col-3"><button class="btn btn-outline-success w-100 fw-bold operacion"
+                            <div class="col-3"><button class="btn btn-outline-success w-100 fw-bold  "
                                     onclick="" data-operacion="respuesta">=</button></div>
-                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold operacion"
+                            <div class="col-3"><button class="btn btn-outline-warning w-100 fw-bold  "
                                     onclick="" data-operacion="/">÷</button></div>
                         </section>
                     </section>
@@ -173,9 +182,10 @@
 
         </section>
 
+        <!-- taller 2 -->
         <section class="row justify-content-center my-5">
 
-            <!-- preguntas del taller numero 1 -->
+            <!-- titulo y preguntas del taller numero 1 -->
             <section class=" col-sm-12 col-md-6 col-lg-6">
                 <h2>Taller 2</h2>
                 <ol class="d-flex flex-column gap-2 ">
