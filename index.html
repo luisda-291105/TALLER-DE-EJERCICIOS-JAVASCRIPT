@@ -49,6 +49,27 @@
             <p class="modoCalculator">modo calculo basico</p>
         </section>
 
+        
+
+        <section id="description" class="m-5">
+            <h3>Taller 1</h3>
+            <p>1: calcular el salario de un empleado que gana X monto
+                descuente el 4% en salud y 5% en pension </p>
+            <p>2: aplique la formula a=(b*h)/2 para calcular el area de un triangulo donde sus dimenciones
+                base y altura se deben pedir al usuario que los digite</p>
+            <p>3: realize las operaciones de sumar , restar , multiplicar , divicion y modulo
+                pidiendole solo dos numeros</p>
+            <p>4: calcule el sueldo mensual de un trabajador ingresando el numero de
+                horas trabajadas en el mes y el valor tanto de las horas normales
+                de trabajos y las horas extras</p>
+            <p>5: digite el ingreso del precio de un producto y se debe calcular el iva,
+                mostrar cuanto es el iva que se agrega, mostrar el precio del producto
+                sin iva y el total a pagar</p>
+            <p>6: calcule el porcentaje de alumnos de un salon de clases , digitando el total de alumnos
+                hombre y mujeres </p>
+            <p>7: calcule el promedio de 3 notas de un alumno , el rango de cada nota es del 1 al 5</p>
+        </section>
+
         <section class="contener w-75 m-auto border rounded my-4 " id="calculator">
             <span style="font-size: 0.78em;" class="ps-2 modoCalculator">calculadora interactiva</span>
             <section class="rounded-4 w-75 border text-center  mx-auto my-3 fs-5">
@@ -59,15 +80,20 @@
 
             <section class="row d-flex  mx-auto my-3 gap-2" id="contenerBtn">
                 <section class="row d-flex gap-1 justify-content-center m-auto filasBotones">
-                    <button class="text-center fw-bold col rounded funcion" onclick="calculateSalary()" data-accion="calcularSalario_salud_pension">Salario salud y pension</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="product()" data-accion="calcularProducto">producto con iva</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="notas()" data-accion="calcularNotas">Notas</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="calculateSalary()"
+                        data-accion="calcularSalario_salud_pension">Salario salud y pension</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="product()"
+                        data-accion="calcularProducto">producto con iva</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="notas()"
+                        data-accion="calcularNotas">Notas</button>
                 </section>
-                
+
                 <section class=" row d-flex  gap-1 justify-content-center m-auto filasBotones">
-                    <button class="text-center fw-bold col rounded funcion" onclick="areaTriangulo()" data-accion="calcularAria">Area</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="alumnos()" data-accion="promedioAlumnos">Alumnos</button>
-                    <button class="text-center fw-bold col rounded operacion"data-valor="%">%</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="areaTriangulo()"
+                        data-accion="calcularAria">Area</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="alumnos()"
+                        data-accion="promedioAlumnos">Alumnos</button>
+                    <button class="text-center fw-bold col rounded operacion" data-valor="%">%</button>
                 </section>
                 <section class=" row d-flex  gap-1 justify-content-center m-auto filasBotones">
                     <button class="text-center fw-bold col rounded numeros  " data-valor="7">7</button>
@@ -89,32 +115,54 @@
                 </section>
                 <section class="row d-flex  gap-1 justify-content-center m-auto filasBotones">
                     <button class="text-center fw-bold col rounded numeros  " data-valor="0">0</button>
-                    <button class="text-center fw-bold col rounded operacion" onclick="limpiar()" data-accion="eliminar"><i class="bi bi-backspace-fill"></i></button>
-                    <button class="text-center fw-bold col rounded operacion" onclick="" data-operacion="respuesta">=</button>
+                    <button class="text-center fw-bold col rounded operacion" onclick="limpiar()"
+                        data-accion="eliminar"><i class="bi bi-backspace-fill"></i></button>
+                    <button class="text-center fw-bold col rounded operacion" onclick=""
+                        data-operacion="respuesta">=</button>
                     <button class="text-center tw-bold col rounded operacion" onclick="" data-operacion="/"> ÷</button>
                 </section>
             </section>
         </section>
+        
+        <section class="m-5">
+            <h3>Taller 2</h3>
+            <p>1: Pide al usuario un número y determina si es par o impar y si es positivo o negativo.</p>
+            <p>2: Pide al usuario dos números y determina cual es el número mayor y cual es el menor.</p>
+            <p>3: Pide al usuario que digite un numero del 1 al 7 y Realiza el código correspondiente para saber cuál es
+                el dia de la semana correspondiente al número digitado;</p>
+            <p>4: Se necesita clasificar la etapa de una persona solo pidiéndole como dato su edad. (Si la edad es menor
+                de 18 es adolente), (si la edad está en el rango de 18 a 28 es adulto adolecente), (si la edad está
+                entre 29 a 49 es adulto), (si la edad está entre 50 en adelante es adulto mayor).
+                Mostrar en pantalla la etapa de la persona.
+            </p>
+            <p>5: Realice una factura de venta, ingrese el valor de 3 productos y calcule lo siguiente:
+                si paga en efectivo paga el valor total.
+                si paga con cupón realice un 3% de descuento
+                si paga a crédito aumente el 5% al total.
+            </p>
+            <p>6. Se pide ingresar 3 notas y calcular el promedio de un alumno, mostrar el nivel del alumnos según su
+                promedio:
+                * menos 2,0 = Malo
+                * menos 2,9 = Debe recuperar
+                * entre 3 – 3,9 = Regular.
+                * entre 4 – 4,4 = Bueno.
+                * entre 4,5 – 5 = Muy bueno
+            </p>
+            <p>7: Calcula la edad actual de una persona a partir de su fecha de nacimiento.
+                Los datos a pedir son: día, mes y año de nacimiento.
+            </p>
+            <div class="d-flex row">
+                <p class="col-sm-10 col-md-6">8: Calcula cuánto se debe pagar por costos de hospitalización en la clínica Me Muero según los
+                    siguientes
+                    datos:
 
-        <section id="description">
-            <h2>Nota:</h2>
-            <p>aplicar las fundamentos de lenguaje javascript realizando ejercicios.</p>
-            <h3>preguntas</h3>
-            <p>1: calcular el salario de un empleado que gana X monto
-                descuente el 4% en salud y 5% en pension </p>
-            <p>2: aplique la formula a=(b*h)/2 para calcular el area de un triangulo donde sus dimenciones
-                base y altura se deben pedir al usuario que los digite</p>
-            <p>3: realize las operaciones de sumar , restar , multiplicar , divicion y modulo
-                pidiendole solo dos numeros</p>
-            <p>4: calcule el sueldo mensual de un trabajador ingresando el numero de
-                horas trabajadas en el mes y el valor tanto de las horas normales
-                de trabajos y las horas extras</p>
-            <p>5: digite el ingreso del precio de un producto y se debe calcular el iva,
-                mostrar cuanto es el iva que se agrega, mostrar el precio del producto
-                sin iva y el total a pagar</p>
-            <p>6: calcule el porcentaje de alumnos de un salon de clases , digitando el total de alumnos
-                hombre y mujeres </p>
-            <p>7: calcule el promedio de 3 notas de un alumno , el rango de cada nota es del 1 al 5</p>
+                    * Mostrar en pantalla días de hospitalización del paciente
+                    *Valor dia según su edad
+                    *Valor del recargo y total a pagar
+                </p>
+                <img class="col-sm-10 col-md-6" src="tablaDatosPregunta8.png"
+                    alt="Esta es la imagen que esta en la pregunta numero 8 'tabla de datos'">
+            </div>
         </section>
 
     </main>
@@ -156,7 +204,8 @@
         crossorigin="anonymous"></script>
 
     <!-- personal -->
-    <script src="main.js"></script>
+    <script src="taller1.js"></script>
+    <script src="taller2.js"></script>
 </body>
 
 </html>
