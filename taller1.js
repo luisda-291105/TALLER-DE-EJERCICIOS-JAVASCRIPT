@@ -1,3 +1,4 @@
+<<<<<<< HEAD:main.js
 let operador = document.getElementById("operacion");
 let botonIgual = document.getElementById("botonIgual");
 
@@ -7,6 +8,11 @@ let resultado = document.getElementById("resultado");
 
 let boton = document.getElementById("boton");
 
+=======
+let calculadora = document.querySelector("#calculator");
+let resultado = document.querySelector("#resultado");
+let contenerBtn = document.getElementById("contenerBtn");
+>>>>>>> ae5e8c24989cc986897acf1486d46a828bf9c8b4:taller1.js
 
 
 function Sumar(imput1, imput2) {
