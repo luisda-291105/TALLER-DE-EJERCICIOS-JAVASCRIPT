@@ -54,6 +54,7 @@ switch (menu) {
 }
 
 } while (menu != 9);
+
 /*
 1.	----------------------
 Pide al usuario un número y determina si es par o impar y si es
@@ -281,12 +282,30 @@ Los datos a pedir son: día, mes y año de nacimiento.
 
 function calculoEdad() {
 
-    let fechaNacimiento = 2005;
-    let fechaActual = 2025;
-    let edadUsuario = fechaActual - fechaNacimiento ;
+    let dia = prompt("de su fecha de nacimiento digite = dia");
+    let mes = prompt("de su fecha de nacimiento digite = mes"); 
+    let año = prompt("de su fecha de nacimiento digite = año");
 
-    alert(`naciste el ${fechaNacimiento} y hoy estamos a ${fechaActual} 
-        asi que usted tiene ${edadUsuario}`);
+    dia = parseInt(dia);
+    mes = parseInt(mes);
+    año = parseInt(año);
+    
+
+    let fechaNacimiento = new Date(año,  mes -1 ,dia  );
+    let hoy =new Date();
+
+    // diferencia en milisegundos
+    let diferenciaMes = hoy.getMonth() - fechaNacimiento.getMonth();
+
+    // convertir misisegundos a años
+    let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+
+    if (diferenciaMes < 0 || (diferenciaMes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+        edad--;
+    }
+
+
+    alert(`tu edad es ${edad}`);
 
 }
 
