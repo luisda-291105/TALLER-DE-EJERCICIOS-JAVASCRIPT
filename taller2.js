@@ -53,7 +53,7 @@ switch (menu) {
         break;
 }
 
-} while (menu == 9);
+} while (menu != 9);
 /*
 1.	----------------------
 Pide al usuario un número y determina si es par o impar y si es
