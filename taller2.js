@@ -1,59 +1,3 @@
-do {
-    let menu = Number(prompt(
-        `-- MENU --
-    par impar  : 1
-    mayor menor : 2
-    dias de semana : 3
-    etapa : 4
-    factura : 5
-    notas : 6
-    calculo edad : 7
-    costo hospitalario : 8
-    salir = 9`));
-
-    switch (menu) {
-        case 1:
-            parImpar();
-            break;
-
-        case 2:
-            parImpar();
-            break;
-
-        case 3:
-            etapa();
-            break;
-
-        case 4:
-            etapa();
-            break;
-
-        case 5:
-            factura();
-            break;
-
-        case 6:
-            notas();
-            break;
-
-        case 7:
-            calculoEdad();
-            break;
-
-        case 8:
-            hospital();
-            break;
-
-        case 9:
-            alert("saliendo");
-            break;
-
-        default:
-            alert("intente de nuevo");
-            break;
-    }
-
-} while (menu != 9);
 
 /*
 1.	----------------------
@@ -325,72 +269,145 @@ entre 5 a 7    = 25_000 * dias    =   5%
 */
 
 function hospital() {
-
-    /* let reTaller2 = document.querySelector("#reTaller2");
-    let btn = document.querySelector("#btn"); */
-
     let edad = Number(prompt("ingrese su edad"))
     let dias = Number(prompt("ingrese el numero de dias"))
 
     function diasHospital() {
-        if (dias <= 1) {
+
+        function menos1() {
             let costoDias = 20_000;
             let sobrecargo = 0;
             let totalPagar = costoDias + sobrecargo;
 
-            alert(`los dias de hospitalizacion fueron ${dias} dias
-                como tienes ${edad} años el valor del dia esta en ${costoDias}$ 
-                y en recargos fueron ${sobrecargo} 
-                en total a pagar son ${totalPagar}`)
+            mensaje(totalPagar, costoDias, sobrecargo);
         }
 
-        else if (dias >= 2 && dias <= 4) {
+        function _2a4() {
             let costoDias = 30_000;
             let sobrecargo = 0;
             let totalPagar = costoDias + sobrecargo;
 
-            alert(`los dias de hospitalizacion fueron ${dias} dias
-                como tienes ${edad} años el valor del dia esta en ${costoDias}$ 
-                y en recargos fueron ${sobrecargo} 
-                en total a pagar son ${totalPagar}`)
+            mensaje(totalPagar, costoDias, sobrecargo);
         }
 
-        else if (dias >= 5 && dias <= 7) {
+        function _5a7() {
             let costoDias = 25_000;
             let sobrecargo = 0.05 * costoDias;
             let totalPagar = costoDias + sobrecargo;
 
-            alert(`los dias de hospitalizacion fueron ${dias} dias
-                como tienes ${edad} años el valor del dia esta en ${costoDias}$ 
-                y en recargos fueron ${sobrecargo} 
-                en total a pagar son ${totalPagar}`)
+            mensaje(totalPagar, costoDias, sobrecargo);
         }
 
-        else {
+        function _mas8() {
             let costoDias = 15_000;
             let sobrecargo = 0.10 * costoDias;
             let totalPagar = costoDias + sobrecargo;
 
-            alert(`los dias de hospitalizacion fueron ${dias} dias
-                como tienes ${edad} años el valor del dia esta en ${costoDias}$ 
-                y en recargos fueron ${sobrecargo} 
-                en total a pagar son ${totalPagar}`)
+            mensaje(totalPagar, costoDias, sobrecargo);
         }
+
+
+
+        if (dias <= 1) {
+            menos1();
+        }
+
+        else if (dias >= 2 && dias <= 4) {
+            _2a4();
+        }
+
+        else if (dias >= 5 && dias <= 7) {
+            _5a7();
+        }
+
+        else {
+            _mas8();
+        }
+
     }
 
     if (edad >= 0 && edad <= 10) {
-        diasHospital(dias);
+        diasHospital();
     }
     else if (edad >= 11 && edad <= 17) {
-        diasHospital(dias);
+        diasHospital();
     }
 
     else if (edad >= 18 && edad <= 49) {
-        diasHospital(dias);
+        diasHospital();
     }
 
     else {
-        diasHospital(dias);
+        diasHospital();
+    }
+
+    function mensaje(totalPagar, costoDias, sobrecargo) {
+        alert(`Resumen de hospitalización:
+
+- Días de hospitalización: ${dias} día(s)
+- Edad del paciente: ${edad} años
+- Costo por día: $${costoDias}
+- Valor por recargos: $${sobrecargo}
+----------------------------------
+Total a pagar: $${totalPagar}`);
     }
 
 }
+
+
+do {
+    let menu = Number(prompt(
+        `-- MENU --
+    par impar  : 1
+    mayor menor : 2
+    dias de semana : 3
+    etapa : 4
+    factura : 5
+    notas : 6
+    calculo edad : 7
+    costo hospitalario : 8
+    salir = 9`));
+
+    switch (menu) {
+        case 1:
+            parImpar();
+            break;
+
+        case 2:
+            parImpar();
+            break;
+
+        case 3:
+            etapa();
+            break;
+
+        case 4:
+            etapa();
+            break;
+
+        case 5:
+            factura();
+            break;
+
+        case 6:
+            notas();
+            break;
+
+        case 7:
+            calculoEdad();
+            break;
+
+        case 8:
+            hospital();
+            break;
+
+        case 9:
+            alert("saliendo");
+            break;
+
+        default:
+            alert("intente de nuevo");
+            break;
+    }
+
+} while (menu != 9);
