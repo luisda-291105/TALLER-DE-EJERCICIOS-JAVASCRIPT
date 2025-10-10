@@ -49,27 +49,32 @@
             <h1 id="title">TALLER DE EJERCICIOS JS</h1>
             <p class="modoCalculator">modo calculo basico</p>
         </section>
+        <!-- calculadora
 
-        <!-- calculadora -->
         <section class="contener w-75 m-auto border rounded my-4 " id="calculator">
             <span style="font-size: 0.78em;" class="ps-2 modoCalculator">calculadora interactiva</span>
             <section class="rounded-4 w-75 border text-center  mx-auto my-3 fs-5">
                 <p id="resultado">resultado</p>
-                <!-- <input type="text" name="resultado" id="resultado" placeholder="resultado" class="rounded text-center"> -->
+                <input type="text" name="resultado" id="resultado" placeholder="resultado" class="rounded text-center"> 
 
             </section>
 
             <section class="row d-flex  mx-auto my-3 gap-2" id="contenerBtn">
                 <section class="row d-flex gap-1 justify-content-center m-auto filasBotones">
-                    <button class="text-center fw-bold col rounded funcion" onclick="calculateSalary()" data-accion="calcularSalario_salud_pension">Salario salud y pension</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="product()" data-accion="calcularProducto">producto con iva</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="notas()" data-accion="calcularNotas">Notas</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="calculateSalary()"
+                        data-accion="calcularSalario_salud_pension">Salario salud y pension</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="product()"
+                        data-accion="calcularProducto">producto con iva</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="notas()"
+                        data-accion="calcularNotas">Notas</button>
                 </section>
-                
+
                 <section class=" row d-flex  gap-1 justify-content-center m-auto filasBotones">
-                    <button class="text-center fw-bold col rounded funcion" onclick="areaTriangulo()" data-accion="calcularAria">Area</button>
-                    <button class="text-center fw-bold col rounded funcion" onclick="alumnos()" data-accion="promedioAlumnos">Alumnos</button>
-                    <button class="text-center fw-bold col rounded operacion"data-valor="%">%</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="areaTriangulo()"
+                        data-accion="calcularAria">Area</button>
+                    <button class="text-center fw-bold col rounded funcion" onclick="alumnos()"
+                        data-accion="promedioAlumnos">Alumnos</button>
+                    <button class="text-center fw-bold col rounded operacion" data-valor="%">%</button>
                 </section>
                 <section class=" row d-flex  gap-1 justify-content-center m-auto filasBotones">
                     <button class="text-center fw-bold col rounded numeros  " data-valor="7">7</button>
@@ -91,122 +96,178 @@
                 </section>
                 <section class="row d-flex  gap-1 justify-content-center m-auto filasBotones">
                     <button class="text-center fw-bold col rounded numeros  " data-valor="0">0</button>
-                    <button class="text-center fw-bold col rounded operacion" onclick="limpiar()" data-accion="eliminar"><i class="bi bi-backspace-fill"></i></button>
-                    <button class="text-center fw-bold col rounded operacion" onclick="" data-operacion="respuesta">=</button>
+                    <button class="text-center fw-bold col rounded operacion" onclick="limpiar()"
+                        data-accion="eliminar"><i class="bi bi-backspace-fill"></i></button>
+                    <button class="text-center fw-bold col rounded operacion" onclick=""
+                        data-operacion="respuesta">=</button>
                     <button class="text-center tw-bold col rounded operacion" onclick="" data-operacion="/"> ÷</button>
                 </section>
             </section>
 
         </section>
+-->
 
-        <!-- taller numero 1 -->
-        <section class="row justify-content-center my-5">
 
-            <!-- titulo y preguntas del taller numero 1 -->
-            <section class=" col-sm-12 col-md-6 col-lg-6">
-                <h2>Taller 1</h2>
-                <ol class="d-flex flex-column gap-2">
-                    <li>calcular el salario de un empleado que gana X monto
-                        descuente el 4% en salud y 5% en pension </li>
-                    <li>aplique la formula a=(b*h)/2 para calcular el area de un triangulo donde sus dimenciones
-                        base y altura se deben pedir al usuario que los digite</li>
-                    <li>realize las operaciones:
-                        <ul>
-                            <li>sumar</li>
-                            <li>restar</li>
-                            <li>multiplicar</li>
-                            <li>divicion</li>
-                            <li>modulo</li>
-                        </ul>
-                        pidiendole solo dos numeros
-                    </li>
-                    <li>calcule el sueldo mensual de un trabajador ingresando el numero de
-                        horas trabajadas en el mes y el valor tanto de las horas normales
-                        de trabajos y las horas extras</li>
-                    <li>digite el ingreso del precio de un producto y se debe calcular el iva,
-                        mostrar cuanto es el iva que se agrega, mostrar el precio del producto
-                        sin iva y el total a pagar</li>
-                    <li>calcule el porcentaje de alumnos de un salon de clases , digitando el total de alumnos
-                        hombre y mujeres</li>
-                    <li>calcule el promedio de 3 notas de un alumno , el rango de cada nota es del 1 al 5</li>
-                </ol>
-            </section>
+        <!-- taller 1 -->
+
+        <section class="justify-content-center my-5">
+            <h2>Taller 1</h2>
+            <ol class="d-flex flex-column gap-2">
+                <li>calcular el salario de un empleado que gana X monto
+                    descuente el 4% en salud y 5% en pension </li>
+                <li>aplique la formula a=(b*h)/2 para calcular el area de un triangulo donde sus dimenciones
+                    base y altura se deben pedir al usuario que los digite</li>
+                <li>realize las operaciones:
+                    <ul>
+                        <li>sumar</li>
+                        <li>restar</li>
+                        <li>multiplicar</li>
+                        <li>divicion</li>
+                        <li>modulo</li>
+                    </ul>
+                    pidiendole solo dos numeros
+                </li>
+                <li>calcule el sueldo mensual de un trabajador ingresando el numero de
+                    horas trabajadas en el mes y el valor tanto de las horas normales
+                    de trabajos y las horas extras</li>
+                <li>digite el ingreso del precio de un producto y se debe calcular el iva,
+                    mostrar cuanto es el iva que se agrega, mostrar el precio del producto
+                    sin iva y el total a pagar</li>
+                <li>calcule el porcentaje de alumnos de un salon de clases , digitando el total de alumnos
+                    hombre y mujeres</li>
+                <li>calcule el promedio de 3 notas de un alumno , el rango de cada nota es del 1 al 5</li>
+            </ol>
         </section>
+
 
         <!-- taller 2 -->
-        <section class="row justify-content-center my-5">
-
+        <section class="justify-content-center my-5">
             <!-- titulo y preguntas del taller numero 2 -->
-            <section class=" col-sm-12 col-md-6 col-lg-6">
-                <h2>Taller 2</h2>
-                <ol class="d-flex flex-column gap-2 ">
-                    <li>Pide al usuario un número y determina si es par o impar y si es positivo o negativo.</li>
-                    <li>Pide al usuario dos números y determina cual es el número mayor y cual es el menor.</li>
-                    <li>Pide al usuario que digite un numero del 1 al 7 y Realiza el código correspondiente para
-                        saber
-                        cuál
-                        es
-                        el dia de la semana correspondiente al número digitado</li>
-                    <li>Se necesita clasificar la etapa de una persona solo pidiéndole como dato su edad:
-                        <ul>
-                            <li>Si la edad es menor de 18 es adolente</li>
-                            <li>si la edad está en el rango de 18 a 28 es adulto adolecente</li>
-                            <li>si la edad está entre 29 a 49 es adulto</li>
-                            <li>si la edad está entre 50 en adelante es adulto mayor</li>
-                        </ul>
-                        Mostrar en pantalla la etapa de la persona.
-                    </li>
-                    <li> Realice una factura de venta, ingrese el valor de 3 productos y calcule lo siguiente:
-                        <ul>
-                            <li>si paga en efectivo paga el valor total.</li>
-                            <li>si paga con cupón realice un 3% de descuento</li>
-                            <li>si paga a crédito aumente el 5% al total.</li>
-                        </ul>
+            <!-- <section class=" col-sm-12 col-md-6 col-lg-6"> -->
+            <h2>Taller 2</h2>
+            <ol class="d-flex flex-column gap-2 ">
+                <li>Pide al usuario un número y determina si es par o impar y si es positivo o negativo.</li>
+                <li>Pide al usuario dos números y determina cual es el número mayor y cual es el menor.</li>
+                <li>Pide al usuario que digite un numero del 1 al 7 y Realiza el código correspondiente para
+                    saber
+                    cuál
+                    es
+                    el dia de la semana correspondiente al número digitado</li>
+                <li>Se necesita clasificar la etapa de una persona solo pidiéndole como dato su edad:
+                    <ul>
+                        <li>Si la edad es menor de 18 es adolente</li>
+                        <li>si la edad está en el rango de 18 a 28 es adulto adolecente</li>
+                        <li>si la edad está entre 29 a 49 es adulto</li>
+                        <li>si la edad está entre 50 en adelante es adulto mayor</li>
+                    </ul>
+                    Mostrar en pantalla la etapa de la persona.
+                </li>
+                <li> Realice una factura de venta, ingrese el valor de 3 productos y calcule lo siguiente:
+                    <ul>
+                        <li>si paga en efectivo paga el valor total.</li>
+                        <li>si paga con cupón realice un 3% de descuento</li>
+                        <li>si paga a crédito aumente el 5% al total.</li>
+                    </ul>
 
 
-                    </li>
-                    <li>Se pide ingresar 3 notas y calcular el promedio de un alumno, mostrar el nivel del alumnos
-                        según
-                        su
-                        promedio:
-                        <ul>
-                            <li>menos 2,0 = Malo</li>
-                            <li>menos 2,9 = Debe recuperar</li>
-                            <li>entre 3 – 3,9 = Regular</li>
-                            <li>entre 4 – 4,4 = Bueno</li>
-                            <li>entre 4,5 – 5 = Muy bueno</li>
-                        </ul>
-                    </li>
-                    <li> Calcula la edad actual de una persona a partir de su fecha de nacimiento.
-                        Los datos a pedir son: día, mes y año de nacimiento.</li>
-                    <li>
-                        <div class="row gap-2">
-                            <div class="col-lg-5 col-md-5 col-sm-12">Calcula cuánto se debe pagar por costos de
-                                hospitalización en la clínica Me Muero según los siguientes datos:
-                                <ul>
-                                    <li>Mostrar en pantalla días de hospitalización del paciente</li>
-                                    <li>Valor dia según su edad</li>
-                                    <li>Valor del recargo y total a pagar</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-5 col-md-5 col-sm-12">
-                                <img class="img-fluid" src="tablaDatosPregunta8.png"
-                                    alt="Esta es la imagen que esta en la pregunta numero 8 'tabla de datos'">
-                            </div>
+                </li>
+                <li>Se pide ingresar 3 notas y calcular el promedio de un alumno, mostrar el nivel del alumnos
+                    según
+                    su
+                    promedio:
+                    <ul>
+                        <li>menos 2,0 = Malo</li>
+                        <li>menos 2,9 = Debe recuperar</li>
+                        <li>entre 3 – 3,9 = Regular</li>
+                        <li>entre 4 – 4,4 = Bueno</li>
+                        <li>entre 4,5 – 5 = Muy bueno</li>
+                    </ul>
+                </li>
+                <li> Calcula la edad actual de una persona a partir de su fecha de nacimiento.
+                    Los datos a pedir son: día, mes y año de nacimiento.</li>
+                <li>
+                    <div class="row gap-2">
+                        <div class="col-md-5 col-sm-12">Calcula cuánto se debe pagar por costos de
+                            hospitalización en la clínica Me Muero según los siguientes datos:
+                            <ul>
+                                <li>Mostrar en pantalla días de hospitalización del paciente</li>
+                                <li>Valor dia según su edad</li>
+                                <li>Valor del recargo y total a pagar</li>
+                            </ul>
                         </div>
-                    </li>
-                </ol>
-            </section>
-
-            <!-- forma de mostrar el taller -->
-<!--             <section class=" col-sm-12 col-md-6 col-lg-6">
-                <p id="reTaller2">resultado taller 2</p>
-                <input type="number" name="" id="laEdad" placeholder="ingrese la edad del paciente">
-                <input type="number" name="" id="dias" placeholder="ingrese los dias que duro el paciente">
-                <button type="button" id="btn">calcular</button>
-            </section> -->
-
+                        <div class=" col-md-5 col-sm-12">
+                            <img class="img-fluid" src="img/tablaDatosPregunta8.png"
+                                alt="Esta es la imagen que esta en la pregunta numero 8 'tabla de datos'">
+                        </div>
+                    </div>
+                </li>
+            </ol>
         </section>
+
+
+        <!-- taller 3 -->
+        <section class="justify-content-center my-5">
+            <h2>Taller 3</h2>
+            <ol class="d-flex flex-column gap-2 ">
+                <li>Hacer un programa que calcule la suma de los N primeros números naturales, dónde N es el número límite ingresado.</li>
+                <li>Hacer un programa que pida el nombre de un estudiante y N notas, calcular el promedio de las notas y determinar si el estudiante aprueba o reprueba; (Aprueba con un promedio de 3).  </li>
+                <li>Ingrese varios números enteros, muestre la cantidad de números ingresados y la suma de los mismos. Realice esta acción hasta que el usuario ingrese la palabra FIN.</li>
+                <li>realice una tabla de multiplicar con cualquier número ingresado hasta el 30.</li>
+                <li>Cree la tabla de multiplicar de cualquier número ingresado de manera descendente</li>
+                <li>Cree un ciclo que cuente del 1 al 30 en intervalos el número ingresado.</li>
+                <li>Cree un ciclo que cuente del 1 al 30 en intervalos el número ingresado, de manera regresiva.</li>
+                <h3>Ejercicios con estructuras repetitivas anidadas</h3>
+                <li>Digite un número (altura) y a partir de él cree una escalera de asteriscos o el carácter que desee; con esa altura. Deberá quedar así, si ponemos una altura de 5
+                    <img src="img/forma_asendente.png" alt="">
+                </li>
+                <li>Digite un número (altura) y a partir de él cree una escalera invertida de asteriscos o el carácter que desee; con esa altura. Deberá quedar así, si ponemos una altura de 5.
+                    <img  src="img/forma_desendente.png" alt="">
+                </li>
+                <li>Cree un programa que permite registrar el número de compras que se venden cada día. pedir al usuario cuantos productos va a comprar y registrar el precio unitario, calcular el valor total de cada compra y al finalizar el día calcular cuántas facturas se hicieron y el total general.
+                    <div>
+                        <h4>Cliente #1</h4>
+                        <p>No. Productos: 3</p>
+                        <p>valor  p1 : 4,500</p>
+                        <p>valor p2: 2,000</p>
+                        <p>valor p3: 3,500</p>
+                        <p>total compra: 10.000</p>
+                    </div>
+                    <div>
+                        <h4>Cliente #2</h4>
+                        <p>No. Productos: 2</p>
+                        <p>valor  p1 : 1,500</p>
+                        <p>valor p2: 2,000</p>
+                        <p>valor p3: 3,500</p>
+                        <p>total compra: 13.500</p>
+                    </div>
+                </li>
+                <li>Cree un programa que calcule el promedio de 3 notas para 3 alumnos, el programa debe mostrar lo siguiente:
+                    <div>
+                        <h4>Nombre Alumno #1 Jossy tello</h4>
+                        <p>Materia: Matemáticas</p>
+                        <p>Nota 1 : 4,5</p>
+                        <p>Nota 2: 4</p>
+                        <p>Nota 3: 3,5</p>
+                        <p>Promedio: 4</p>
+                    </div>
+                    <div>
+                        <h4>Nombre Alumno #2 Angela Robledo</h4>
+                        <p>Materia: Física</p>
+                        <p>Nota 1 : 4,5</p>
+                        <p>Nota 2: 2,5</p>
+                        <p>Nota 3: 5</p>
+                        <p>Promedio: 4,2</p>
+                    </div>
+                </li>
+                <li>Cree tabla de números del 1 al 15 mínimo en HTML. la salida se debe ver así:
+                    <img src="img/cuadrilla_numerica.png" alt="">
+                </li>
+                <h3>Ejercicios con estructuras repetitivas con condicionales.</h3>
+                <li>Cree un programa que pida la edad a 10 estudiantes y determine cuántos son menores de edad y cuales son mayores de edad.</li>
+                <li>Utiliza la función Math.ramdon() para generar un número aleatorio y compararlo con el que el usuario digite. tienes 3 intentos para acertar. </li>
+            </ol>
+        </section>
+
     </main>
 
     <footer class="border-top pt-4">
@@ -253,8 +314,9 @@
         crossorigin="anonymous"></script>
 
     <!-- personal -->
-    <script src="taller1.js"></script>
-    <script src="taller2.js"></script>
+    <!-- <script src="taller1.js"></script> -->
+    <!-- <script src="taller2.js"></script> -->
+    <script src="taller3.js"></script>
 </body>
 
 </html>

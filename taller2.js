@@ -17,11 +17,11 @@ switch (menu) {
         break;
 
     case 2:
-        parImpar();
+        mayorMenor();
         break;
 
     case 3:
-        etapa();
+        semana();
         break;
 
     case 4:
