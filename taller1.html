@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primer taller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-body-tertiary " id="retorno">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#retorno">LuisDaniel <i class="bi bi-person-hearts"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="taller2.html">taller 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="taller3.html">taller 3</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Area</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="">Alumnos</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        // =================== FUNCIONES ===================
+
+        function Sumar(num1, num2) {
+            return num1 + num2;
+        }
+
+        function restar(num1, num2) {
+            return num1 - num2;
+        }
+
+        function multiplicar(num1, num2) {
+            return num1 * num2;
+        }
+
+        function divide(num1, num2) {
+            if (num2 === 0) {
+                alert("❌ No puedes dividir entre cero");
+                return null;
+            }
+            return num1 / num2;
+        }
+
+        function mod(num1, num2) {
+            return num1 % num2;
+        }
+
+        function calculateSalary() {
+            const horas = Number(prompt("¿Cuántas horas trabajas al día?"));
+            const horasExtras = Number(prompt("¿Cuántas horas extras trabajaste?"));
+            const pagoPorHora = Number(prompt("¿Cuánto te pagan por hora?"));
+
+            const horaMes = horas * 30;
+            const totalHoras = horaMes + horasExtras;
+            const valorTotal = pagoPorHora * totalHoras;
+
+            const pension = valorTotal * 0.05;
+            const salud = valorTotal * 0.04;
+            const salarioNeto = valorTotal - pension - salud;
+
+            alert(`
+📊 RESUMEN SALARIAL
+Horas al día: ${horas}
+Horas extras: ${horasExtras}
+Pago por hora: ${pagoPorHora}
+Total trabajado: ${totalHoras} horas
+Total bruto: ${valorTotal}$
+Descuento salud (4%): ${salud}$
+Descuento pensión (5%): ${pension}$
+💰 Salario neto: ${salarioNeto}$
+    `);
+        }
+
+        function product() {
+            let precio = Number(prompt("Ingrese el precio del producto"));
+            let iva = 0.19;
+            let total = precio + (precio * iva);
+
+            alert(`
+💵 PRECIO DEL PRODUCTO
+Precio base: ${precio}$
+IVA (19%): ${(precio * iva).toFixed(2)}$
+Total con IVA: ${total.toFixed(2)}$
+    `);
+        }
+
+        function alumnos() {
+            let hombres = Number(prompt("Ingrese el número de estudiantes masculinos"));
+            let mujeres = Number(prompt("Ingrese el número de estudiantes femeninos"));
+
+            let total = hombres + mujeres;
+            let porcentajeH = (hombres / total) * 100;
+            let porcentajeM = (mujeres / total) * 100;
+
+            alert(`
+👨‍🏫 TOTAL DE ALUMNOS: ${total}
+Hombres: ${hombres} (${porcentajeH.toFixed(2)}%)
+Mujeres: ${mujeres} (${porcentajeM.toFixed(2)}%)
+    `);
+        }
+
+        function areaTriangulo() {
+            let base = Number(prompt("Ingrese la base del triángulo"));
+            let altura = Number(prompt("Ingrese la altura del triángulo"));
+            let area = (base * altura) / 2;
+            alert(`📐 El área del triángulo es: ${area}`);
+        }
+
+        function notas() {
+            let n1 = Number(prompt("Ingrese la primera nota"));
+            let n2 = Number(prompt("Ingrese la segunda nota"));
+            let n3 = Number(prompt("Ingrese la tercera nota"));
+            let promedio = (n1 + n2 + n3) / 3;
+            alert(`📚 El promedio del alumno es: ${promedio.toFixed(2)}`);
+        }
+
+        // =================== MENÚ PRINCIPAL ===================
+
+        let opcion;
+
+        do {
+            opcion = prompt(`
+--- 🧮 MENÚ PRINCIPAL ---
+1️⃣ Sumar dos números
+2️⃣ Restar dos números
+3️⃣ Multiplicar dos números
+4️⃣ Dividir dos números
+5️⃣ Módulo de dos números
+6️⃣ Calcular salario neto
+7️⃣ Calcular total producto + IVA
+8️⃣ Porcentaje de alumnos hombres/mujeres
+9️⃣ Calcular área de triángulo
+🔟 Promedio de notas de un alumno
+0️⃣ Salir
+
+Seleccione una opción:
+    `);
+
+            switch (opcion) {
+                case "1":
+                    let s1 = Number(prompt("Primer número:"));
+                    let s2 = Number(prompt("Segundo número:"));
+                    alert(`Resultado: ${Sumar(s1, s2)}`);
+                    break;
+
+                case "2":
+                    let r1 = Number(prompt("Primer número:"));
+                    let r2 = Number(prompt("Segundo número:"));
+                    alert(`Resultado: ${restar(r1, r2)}`);
+                    break;
+
+                case "3":
+                    let m1 = Number(prompt("Primer número:"));
+                    let m2 = Number(prompt("Segundo número:"));
+                    alert(`Resultado: ${multiplicar(m1, m2)}`);
+                    break;
+
+                case "4":
+                    let d1 = Number(prompt("Dividendo:"));
+                    let d2 = Number(prompt("Divisor:"));
+                    let res = divide(d1, d2);
+                    if (res !== null) alert(`Resultado: ${res}`);
+                    break;
+
+                case "5":
+                    let mo1 = Number(prompt("Primer número:"));
+                    let mo2 = Number(prompt("Segundo número:"));
+                    alert(`Resultado: ${mod(mo1, mo2)}`);
+                    break;
+
+                case "6":
+                    calculateSalary();
+                    break;
+
+                case "7":
+                    product();
+                    break;
+
+                case "8":
+                    alumnos();
+                    break;
+
+                case "9":
+                    areaTriangulo();
+                    break;
+
+                case "10":
+                    notas();
+                    break;
+
+                case "0":
+                    alert("👋 Saliendo del programa...");
+                    break;
+
+                default:
+                    alert("⚠️ Opción no válida. Intente de nuevo.");
+            }
+
+        } while (opcion !== "0");
+
+    </script>
+</body>
+
+</html>
