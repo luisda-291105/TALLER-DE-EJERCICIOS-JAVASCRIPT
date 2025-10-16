@@ -333,3 +333,87 @@ function numero_random() {
         }
     }
 }
+
+
+
+while (true) {
+    let opcion = prompt(`
+╔══════════════════════════════════════╗
+║            📋 MENÚ PRINCIPAL         ║
+╠══════════════════════════════════════╣
+║  1️⃣  Suma de N números naturales     ║
+║  2️⃣  Promedio de notas del estudiante║
+║  3️⃣  Varios números enteros          ║
+║  4️⃣  Tabla de multiplicar            ║
+║  5️⃣  Tabla de multiplicar descendente║
+║  6️⃣  Ingresando intervalo            ║
+║  7️⃣  Intervalo regresivo             ║
+║  8️⃣  Altura con caracteres           ║
+║  9️⃣  Altura regresiva con caracteres ║
+║  1️⃣0️⃣  Factura de venta             ║
+║  1️⃣1️⃣  Promedio de notas (v2)       ║
+║  1️⃣2️⃣  Tabla numérica (1 al 15)     ║
+║  1️⃣3️⃣  Contar mayores y menores     ║
+║  1️⃣4️⃣  Número aleatorio (random)    ║
+║  1️⃣5️⃣  ❌ Salir                     ║
+╚══════════════════════════════════════╝
+
+👉 Escribe el número de la opción que deseas ejecutar:
+`);
+    if (opcion != "15") {
+
+        switch (opcion) {
+            case "1":
+                suma_de_N_numeros_naturales()
+                break;
+            case "2":
+                promedio_notas_del_estudiante()
+                break;
+            case "3":
+                varios_numeros_enteros()
+                break;
+            case "4":
+                tabla_de_multiplicar()
+                break;
+            case "5":
+                tabla_de_multiplicar_desendente()
+                break;
+            case "6":
+                ingresando_intervalo()
+                break;
+            case "7":
+                ingresando_intervalo_regresiva()
+                break;
+            case "8":
+                altura_caracter()
+                break;
+            case "9":
+                altura_caracter_regresiva()
+                break;
+            case "10":
+                factura()
+                break;
+            case "11":
+                promedio_notas()
+                break;
+            case "12":
+                tabla_numerica()
+                break;
+            case "13":
+                cuantos_mayores_menores()
+                break;
+            case "14":
+                numero_random()
+                break;
+            case "15":
+                alert("saliendo")
+                break;
+            default:
+                alert("intentalo de nuevo , las opciones son de l al 15")
+                break;
+        }
+    } else {
+        alert("adios")
+        break;
+    }
+}
