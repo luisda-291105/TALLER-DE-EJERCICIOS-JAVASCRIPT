@@ -24,6 +24,7 @@ aprueba o reprueba; (Aprueba con un promedio de 3).
 function promedio_notas_del_estudiante() {
     let nombreEstudiante = prompt("Ingresar el nombre del estudiannte ");
     let sumador = 0;
+    let promedioNotas ;
 
     for (let index = 0; index < 3; index++) {
         let notas = Number(prompt(`ingrese la nota #${(index + 1)} del estudiante`));
@@ -32,9 +33,9 @@ function promedio_notas_del_estudiante() {
         if (index == 2) {
             promedioNotas = sumador / 3;
             if (promedioNotas >= 3) {
-                alert(`el estudiante ${nombreEstudiante} Aprueba con un promedio de ${promedioNotas}`);
+                document-writeln(`el estudiante ${nombreEstudiante} Aprueba con un promedio de ${promedioNotas}`);
             } else {
-                alert(`el estudiante ${nombreEstudiante} Reprueba con un promedio de ${promedioNotas}`);
+                document-writeln(`el estudiante ${nombreEstudiante} Reprueba con un promedio de ${promedioNotas}`);
             }
         }
     }
@@ -138,7 +139,6 @@ function altura_caracter() {
     let caracter = "*";
     for (let index = 0; index < altura; index++) {
         contador = contador + caracter;
-        console.log(contador);
         document.write(contador);
         document.write("<br>");
     }
@@ -156,8 +156,7 @@ function altura_caracter_regresiva() {
     let contador = " ";
     let caracter = "*";
     for (let index = altura; index >= 0; index--) {
-        contador = caracter.repeat(index) /* altura * index */;
-        console.log(contador);
+        contador = caracter.repeat(index);
         document.write(contador);
         document.write("<br>");
     }
@@ -187,7 +186,7 @@ function factura() {
     let productos = [];
 
     while (true) {
-        let nombre_cliente = "luis"
+        // let nombre_cliente = "luis"
         let no_productos = prompt("ingrese  la cantidad de productos");
         let total = 0;
 
@@ -249,7 +248,7 @@ function promedio_notas() {
 
         let promedio = ((nota1 + nota2 + nota3) / 3).toFixed(1);
 
-        alert(`
+        document.writeln(`
 Nombre Alumno #${contador}: ${nombre}
 Materia: ${materia}
 
@@ -296,15 +295,15 @@ function cuantos_mayores_menores() {
     for (let index = 0; index < persona; index++) {
         let edad = Number(prompt("ingrese su edad"))
         if (edad >= 18) {
-            console.log(`la persona #${(index + 1)} su edad es: ${edad} y es mayor de edad`)
+            document.writeln(`la persona #${(index + 1)} su edad es: ${edad} y es mayor de edad`)
             s_mayor += 1;
         } else {
-            console.log(`la persona #${(index + 1)} su edad es: ${edad} y es menor de edad`)
+            document.writeln(`la persona #${(index + 1)} su edad es: ${edad} y es menor de edad`)
             s_menor += 1;
         }
     }
-    console.log(`de las personas evaluadas , el numero de mayores es: ${s_mayor}`)
-    console.log(`de las personas evaluadas , el numero de nemores es: ${s_menor}`)
+    document.writeln(`de las personas evaluadas , el numero de mayores es: ${s_mayor}`)
+    document.writeln(`de las personas evaluadas , el numero de nemores es: ${s_menor}`)
 
 }
 
@@ -319,17 +318,17 @@ function numero_random() {
     for (let index = 0; index < 3; index++) {
         let numeroIngresado = Number(prompt(`ingrese un numero`));
         let intentosRestante = 3 - (index + 1)
-        console.log(`intento #${(index + 1)} `);
+        document.writeln(`intento #${(index + 1)} `);
 
         if (numeroIngresado == numeroRandom) {
-            console.log(`el numero ingresado es igual que el numero random`);
+            document.writeln(`el numero ingresado es igual que el numero random`);
             break;
         } else if (index == 2) {
-            console.log(`el numero random es ${numeroRandom}`);
+            document.writeln(`el numero random es ${numeroRandom}`);
             break;
         }
         else {
-            console.log(`intentalo de nuevo, te quedan ${intentosRestante}`)
+            document.writeln(`intentalo de nuevo, te quedan ${intentosRestante}`)
         }
     }
 }
@@ -360,8 +359,8 @@ while (true) {
 
 👉 Escribe el número de la opción que deseas ejecutar:
 `);
-    if (opcion != "15") {
 
+    if (opcion != "15") {
         switch (opcion) {
             case "1":
                 suma_de_N_numeros_naturales()
@@ -412,7 +411,9 @@ while (true) {
                 alert("intentalo de nuevo , las opciones son de l al 15")
                 break;
         }
-    } else {
+    } 
+    
+    else {
         alert("adios")
         break;
     }
