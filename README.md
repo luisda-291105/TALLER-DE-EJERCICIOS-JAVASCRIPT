@@ -1,160 +1,203 @@
-    PROGRAMACION WEB :
-    profe: jossy tello
-    aplicar las fundamentos de lenguaje javascript realizando ejercicios.
+# 🧑‍💻 TALLERES DE EJERCICIOS — FRONTEND I (Segundo Semestre)
 
-TALLER = 1
+Repositorio dedicado a los talleres prácticos de programación web realizados durante el segundo semestre de Frontend I.
+En este proyecto se aplican los fundamentos del lenguaje JavaScript mediante distintos tipos de ejercicios: lineales, condicionales y repetitivos.
 
-    EJERCICIOS LINEALES
+## 📘 Información General
 
-    // 1 --
-    calcular el salario de un empleado que gana X monto
-    descuente el 4% en salud y 5% en pension
+Asignatura: Programación Web
 
-    // 2 --
-    aplique la formula a=(b*h)/2 para calcular el area de un triangulo donde sus dimenciones
-    base y altura se deben pedir al usuario que los digite
+Docente: Jossy Tello
 
-    // 3 --
+Lenguaje: JavaScript
 
-    realize las operaciones de sumar , restar , multiplicar , divicion  y modulo
-    pidiendole solo dos numeros
+Objetivo: Aplicar los fundamentos del lenguaje JavaScript mediante la resolución de ejercicios prácticos y estructurados.
 
-    // 4 --
+[🌐 Vista Previa del Proyecto ](https://github.com/luisda-291105/TALLER-DE-EJERCICIOS-JAVASCRIPT)
 
-    calcule el sueldo mensual de un trabajador ingresando el numero de horas trabajadas
-    en el mes y el valor tanto de las horas normales de trabajos y las horas extras
+[🔗 Haz clic aquí para ver la página en vivo](https://luisda-291105.github.io/TALLER-DE-EJERCICIOS-JAVASCRIPT/)
 
-    // 5 --
+## 🧩 TALLER 1 — EJERCICIOS LINEALES 
 
-    digite el ingreso del precio de un producto y se debe calcular el iva,
-    mostrar cuanto es el iva que se agrega, mostrar el precio del producto
-    sin iva y el total a pagar
+Ejercicios básicos para practicar operaciones aritméticas simples y manejo de entradas del usuario.
 
-    // 6 --
+### 🧮 Ejercicios
 
-    calcule el porcentaje de alumnos de un salon de clases , digitando el total de alumnos
-    hombre y mujeres
+1. Cálculo de salario:
+Calcular el salario de un empleado que gana un monto X, descontando el 4% en salud y 5% en pensión.
 
-    // 7 --
+2. Área de un triángulo:
+Aplicar la fórmula A = (b * h) / 2, solicitando la base y la altura al usuario.
 
-    calcule el promedio de 3 notas de un alumno , el rango de cada nota es del 1 al 5
+3. Operaciones aritméticas:
+Sumar, restar, multiplicar, dividir y obtener el módulo de dos números ingresados.
 
-TALLER = 2
+4. Sueldo mensual:
+Calcular el sueldo mensual según las horas trabajadas (normales y extras) y sus respectivos valores.
 
-    EJERCICIOS CONDICIONEALES
+5. Precio con IVA:
+Ingresar el precio de un producto, calcular el IVA, mostrar el valor del IVA, el precio sin IVA y el total a pagar.
 
-    //1 --
-    Pide al usuario un número y determina si es par o impar y si es positivo o negativo.
+6. Porcentaje de alumnos:
+Calcular el porcentaje de hombres y mujeres en un salón de clases.
 
-    //2 -- 
-    Pide al usuario dos números y determina cual es el número mayor y cual es el menor.
+7. Promedio de notas:
+Calcular el promedio de 3 notas de un alumno (rango de 1 a 5).
 
-    //3 --  
-    Pide al usuario que digite un numero del 1 al 7 y Realiza el código correspondiente para saber cuál es el dia de la semana correspondiente al número digitado;
+## ⚙️ TALLER 2 — EJERCICIOS CONDICIONALES
 
-    //4 --       
-    Se necesita clasificar la etapa de una persona solo pidiéndole como dato su edad. (Si la edad es menor de 18 es adolente), (si la edad está en el rango de 18 a 28 es adulto adolecente), (si la edad está entre 29 a 49 es adulto), (si la edad está entre 50 en adelante es adulto mayor).
+Ejercicios enfocados en estructuras de decisión usando condicionales if / else y switch.
 
-    Mostrar en pantalla la etapa de la persona.
+### 🧠 Ejercicios
 
-    //5 --       
-    Realice una factura de venta, ingrese el valor de 3 productos y calcule lo siguiente:
+1. Par o impar / positivo o negativo:
+Determinar si un número ingresado es par o impar y positivo o negativo.
 
-    si paga en efectivo paga el valor total.
-    si paga con cupón realice un 3% de descuento
-    si paga a crédito aumente el 5% al total.
+2. Número mayor y menor:
+Ingresar dos números y determinar cuál es el mayor y cuál el menor.
 
-    //6 -- 
-    Se pide ingresar 3 notas y calcular el promedio de un alumno, mostrar el nivel del alumnos según su promedio:
+3. Día de la semana:
+Digitar un número del 1 al 7 y mostrar el día de la semana correspondiente.
 
-    - menos 2,0 = Malo
-    - menos 2,9 = Debe recuperar
-    - entre 3 – 3,9 = Regular.
-    - entre 4 – 4,4 = Bueno.
-    - entre 4,5 – 5 = Muy bueno
+4. Clasificación por edad:
+Clasificar la etapa de una persona según su edad:
 
+< 18 → Adolescente
 
-TALLER 3
+18–28 → Adulto joven
 
-    EJERCICIOS CON ESTRUCTURAS REPETITIVAS
+29–49 → Adulto
 
-    //1 ------	
-    Hacer un programa que calcule la suma de los N primeros números naturales, dónde N es el número límite ingresado.
+50+ → Adulto mayor
 
-    //2 ------	
-    Hacer un programa que pida el nombre de un estudiante y N notas, calcular el promedio de las notas y determinar si el estudiante aprueba o reprueba; (Aprueba con un promedio de 3). 
+5. Factura de venta:
+Ingresar el valor de tres productos y calcular el total según el método de pago:
 
-    //3 ------	
-    Ingrese varios números enteros, muestre la cantidad de números ingresados y la suma de los mismos. Realice esta acción hasta que el usuario ingrese la palabra FIN.
+Efectivo → valor total
 
-    //4 ------	
-    realice una tabla de multiplicar con cualquier número ingresado hasta el 30.
+Cupón → 3% de descuento
 
-    //5 ------	
-    Cree la tabla de multiplicar de cualquier número ingresado de manera descendente.
+Crédito → 5% de recargo
 
-    //6 ------	
-    Cree un ciclo que cuente del 1 al 30 en intervalos el número ingresado.
+6. Promedio y nivel de desempeño:
+Calcular el promedio de 3 notas e indicar el nivel del alumno:
 
-    //7 ------	
-    Cree un ciclo que cuente del 1 al 30 en intervalos el número ingresado, de manera regresiva.
-    Ejercicios con estructuras repetitivas anidadas.
+< 2.0 → Malo
 
-    //8 ------	
-    Digite un número (altura) y a partir de él cree una escalera de asteriscos o el carácter que desee; con esa altura. Deberá quedar así, si ponemos una altura de 5.
+< 2.9 → Debe recuperar
 
-    //9 ------	
-    Digite un número (altura) y a partir de él cree una escalera invertida de asteriscos o el carácter que desee; con esa altura. Deberá quedar así, si ponemos una altura de 5.
+3.0–3.9 → Regular
 
-    //10 ------	 
-    Cree un programa que permite registrar el número de compras que se venden cada día. pedir al usuario cuantos productos va a comprar y registrar el precio unitario, calcular el valor total de cada compra y al finalizar el día calcular cuántas facturas se hicieron y el total general.
-    
-    -Cliente #1
-    No. Productos: 3
-    valor  p1 : 4,500
-    valor p2: 2,000
-    valor p3: 3,500
-    total compra: 10.000
+4.0–4.4 → Bueno
 
-    -Cliente #2
-    No. Productos: 2
-    valor  p1 : 1,500
-    valor p2: 2,000
-    total compra: 3.500
-    Total Ventas del dia: 2
-    Total General del dia: 13.500
+4.5–5.0 → Muy bueno
 
-    //11 ------	 
-    Cree un programa que calcule el promedio de 3 notas para 3 alumnos, el programa debe mostrar lo siguiente:
+## 🔁 TALLER 3 — ESTRUCTURAS REPETITIVAS
 
-    Nombre Alumno #1 Jossy tello
-    Materia: Matemáticas
-    Nota 1 : 4,5
-    Nota 2: 4
-    Nota 3: 3,5
-    Promedio: 4
+Ejercicios para practicar bucles como for, while, y do...while, con ejemplos de ciclos anidados y combinados con condicionales.
 
-    Nombre Alumno #2 Angela Robledo
-    Materia: Física
-    Nota 1 : 4,5
-    Nota 2: 2,5
-    Nota 3: 5
-    Promedio: 4,2
+### 🔄 Ejercicios Básicos
+
+1. Suma de N números naturales.
+
+2. Promedio de N notas de un estudiante (aprueba con promedio ≥ 3).
+
+3. Suma y cantidad de números ingresados hasta escribir FIN.
+
+4. Tabla de multiplicar hasta el 30.
+
+5. Tabla de multiplicar descendente.
+
+6. Contador ascendente del 1 al 30 en intervalos definidos por el usuario.
+
+7. Contador descendente del 30 al 1 en intervalos definidos.
+
+*🧱 Ejercicios Anidados*
+
+8. Escalera de asteriscos:
+Crear una escalera visual con la altura ingresada.
+Ejemplo (altura = 5):
+
+*
+**
+***
+****
+*****
 
 
-    //12 -------
-     Cree tabla de números del 1 al 15 mínimo en HTML. la salida se debe ver así:
+9. Escalera invertida:
+Crear una escalera de asteriscos invertida con la altura ingresada.
+Ejemplo (altura = 5):
 
-    1	2	3	4	5
-    6	7	8	9	10
-    11	12	13	14	15
+*****
+****
+***
+**
+*
 
-    Ejercicios con estructuras repetitivas con condicionales.
+*🧾 Ejercicios con estructuras repetitivas + condicionales*
 
-    //13 ------	 
-    Cree un programa que pida la edad a 10 estudiantes y determine cuántos son menores de edad y cuales son mayores de edad.
+10. Registro de compras diarias:
+Permitir registrar el número de productos y su precio unitario, calcular el total por cliente y el total general del día.
+Ejemplo:
 
-    //14 ------	
-    Utiliza la función Math.ramdon() para generar un número aleatorio y compararlo con el que el usuario digite. tienes 3 intentos para acertar. 
+Cliente #1
+Productos: 3
+p1: 4500
+p2: 2000
+p3: 3500
+Total: 10,000
+
+Cliente #2
+Productos: 2
+p1: 1500
+p2: 2000
+Total: 3,500
+
+Total ventas del día: 2
+Total general del día: 13,500
 
 
+11.  Promedio de 3 alumnos:
+Calcular el promedio de 3 notas por alumno.
+Ejemplo de salida:
+
+Alumno #1: Jossy Tello
+Materia: Matemáticas
+Promedio: 4.0
+
+Alumno #2: Ángela Robledo
+Materia: Física
+Promedio: 4.2
+
+
+12. Tabla numérica en HTML:
+Mostrar una tabla del 1 al 15 con formato tabular:
+
+1  2  3  4  5
+6  7  8  9 10
+11 12 13 14 15
+
+
+13. Conteo de edades:
+Ingresar la edad de 10 estudiantes y mostrar cuántos son menores y mayores de edad.
+
+14. Número aleatorio con intentos:
+Generar un número aleatorio con Math.random() y permitir 3 intentos al usuario para adivinarlo.
+
+🧰 Tecnologías Utilizadas
+
+HTML5
+
+CSS3
+
+JavaScript (puro / Vanilla JS)
+
+GitHub Pages (para la publicación)
+
+✨ Autor
+
+Luis Daniel
+👨‍🎓 Estudiante de Desarrollo de Software
+📍 Colombia
+[📬 GitHub Profile](https://github.com/luisda-291105)
