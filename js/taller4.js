@@ -5,12 +5,6 @@ let botonAgregar = document.getElementById("botonAgregar");
 // estas son para contener 
 let contenedorLista = document.getElementById("contenedorLista");
 
-
-// estas dos variables son para crear una funcion que elimine la respuesta
-let boton_eliminar = document.getElementById("boton_eliminar");
-let formularioSecundario = document.getElementById("formularioSecundario");
-
-
 /* 1: -----  superficie_del_rectangulo
 crea y llama una funcion que recibe el ancho y el alto de un rectángulo y
 calcula su superficie. Fórmula: superficie = ancho * alto
@@ -36,9 +30,10 @@ function superficie_del_rectangulo() {
             >
         </div>
         <div>
-            <button onclick="calculo_superficie_del_rectangulo()">calcular</button>
-            </div>
-            <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+            <button onclick="calculo_superficie_del_rectangulo()" class="boton">calcular</button>
+        </div>
+        <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
     </div>
     `
 }
@@ -46,8 +41,8 @@ function superficie_del_rectangulo() {
 function calculo_superficie_del_rectangulo() {
     // obtiene los valores
     let superficie;
-    let ancho = document.getElementById("ancho").value || 0;
-    let alto = document.getElementById("alto").value || 0;
+    let ancho = parseFloat(document.getElementById("ancho").value || 0);
+    let alto = parseFloat(document.getElementById("alto").value || 0);
 
     // operacion
     superficie = ancho * alto;
@@ -76,7 +71,9 @@ function velocidad() {
         </div>
 
         <div >
-            <button onclick="calculo_velocidad()">calcular</button>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+
+            <button onclick="calculo_velocidad()" class="boton">calcular</button>
             </div>
             <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
     </div>
@@ -85,7 +82,7 @@ function velocidad() {
 }
 
 function calculo_velocidad() {
-    let km_h = document.getElementById("kilometros").value || 0;
+    let km_h = parseFloat(document.getElementById("kilometros").value || 0);
 
     let m_s = km_h * 0.27778;
 
@@ -122,7 +119,9 @@ function circunferencia_circulo() {
         </div>
 
         <div >
-            <button onclick="calculo_circunferencia_circulo()">calcular</button>
+        <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+            <button onclick="calculo_circunferencia_circulo()" class="boton">calcular</button>
+
             </div>
             <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
     </div>
@@ -133,7 +132,7 @@ function circunferencia_circulo() {
 
 function calculo_circunferencia_circulo() {
     const pi = Math.PI;
-    let radio = document.getElementById("radio").value || 0;
+    let radio = parseFloat(document.getElementById("radio").value || 0);
 
     let circunferencia = 2 * pi * radio;
 
@@ -166,7 +165,9 @@ function validar_texto() {
         </div>
 
         <div>
-            <button onclick="calculo_validar_texto()">verificar</button>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+
+            <button onclick="calculo_validar_texto()" class="boton">verificar</button>
             </div>
             <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
     </div>
@@ -174,12 +175,14 @@ function validar_texto() {
 }
 
 function calculo_validar_texto() {
-    let nombre = document.getElementById("nombre");
+    let nombre = document.getElementById("nombre").value;
 
     if (isNaN(nombre)) {
-        document.getElementById("aquiRespuesta").innerHTML = ("enserio te llamas " + nombre + " chimba ese nombre");
+        document.getElementById("aquiRespuesta").innerHTML =
+            `Enserio te llamas ${nombre}? ¡Chimba ese nombre!`;
     } else {
-        document.getElementById("aquiRespuesta").innerHTML = ("ingresa un nombre válido");
+        document.getElementById("aquiRespuesta").innerHTML =
+            "Ingresa un nombre válido";
     }
 }
 
@@ -218,7 +221,9 @@ function calculadora_basica_completa() {
             >
         </div>
         <div>
-            <button onclick="calculo_calculadora_basica_completa()">calcular</button>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+
+            <button onclick="calculo_calculadora_basica_completa()" class="boton">calcular</button>
             </div>
             <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
     </div>
@@ -246,8 +251,8 @@ function calculo_calculadora_basica_completa() {
         }
     }
     let operacion = document.getElementById("optionSelect").value;
-    let numero1 = document.getElementById("numero1").value || 0;
-    let numero2 = document.getElementById("numero2").value || 0;
+    let numero1 = parseFloat(document.getElementById("numero1").value || 0);
+    let numero2 = parseFloat(document.getElementById("numero2").value || 0);
     let respuesta;
 
     let calculadora_basica_1 = new calculadora_basica(numero1, numero2)
@@ -314,7 +319,9 @@ function conversor_de_temperatura() {
         </div>
 
         <div>
-            <button onclick="calculo_conversor_de_temperatura()">calcular</button>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+
+            <button onclick="calculo_conversor_de_temperatura()" class="boton">calcular</button>
             </div>
             <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
     </div>
@@ -322,7 +329,7 @@ function conversor_de_temperatura() {
 }
 
 function calculo_conversor_de_temperatura() {
-    let temperaturaInput = document.getElementById("temperaturaInput").value || 0;
+    let temperaturaInput = parseFloat(document.getElementById("temperaturaInput").value || 0);
     let operacion = document.getElementById("optionSelect").value;
     let f = 0;
     let c = 0;
@@ -383,7 +390,9 @@ function indise_masa_muscular() {
             >
         </div>
         <div>
-            <button onclick="calculo_indise_masa_muscular()">calcular</button>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+
+            <button onclick="calculo_indise_masa_muscular()" class="boton">calcular</button>
         </div>
         <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;">
 
@@ -395,8 +404,8 @@ function indise_masa_muscular() {
 
 function calculo_indise_masa_muscular() {
     let IMC;
-    let peso = document.getElementById("peso").value || 0;
-    let altura = document.getElementById("altura").value || 0;
+    let peso = parseFloat(document.getElementById("peso").value || 0);
+    let altura = parseFloat(document.getElementById("altura").value || 0);
 
 
     if (isNaN(peso) || isNaN(altura)) {
@@ -439,7 +448,9 @@ function precentaciones_con_nombre() {
             >
         </div>
         <div>
-            <button onclick="funcion_precentaciones_con_nombre()">calcular</button>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+
+            <button onclick="funcion_precentaciones_con_nombre()" class="boton">calcular</button>
         </div>
         <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
     </div>
@@ -479,61 +490,72 @@ Total A pagar 11.900
 
 function factura() {
     contenedorLista.innerHTML = `
-    <!-- Solo los dos inputs -->
-    <div class="formulario" id="formularioSecundario">
-        <div class="grupo-input">
-            <input 
-                type="number" 
-                id="precio" 
-                placeholder="Escribe aquí el precio"
-            >
-        </div>
+        <div class="formulario" id="formularioSecundario">
+            <div class="grupo-input">
+                <input 
+                    min="0"
+                    type="number" 
+                    id="numeroProductos" 
+                    placeholder="Número de productos"
+                >
+            </div>
+            <div>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
 
-        <div class="grupo-input">
-            <input 
-                type="number" 
-                id="numeroProductos" 
-                placeholder="numero Productos aquí"
-            >
+                <button onclick="generarInputs()" class="boton">Aceptar</button>
+            </div>
+            <div id="listaPrecios" style="margin-top: 10px;"></div>
+            <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
         </div>
-        <div>
-            <button onclick="calculo_factura()">calcular</button>
-        </div>
-        <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
-    </div>
-`;
-
+    `;
 }
 
-// hacer de nuevo
-function calculo_factura() {
-    let precio = 0;
-    let numeroProductos = document.getElementById("numeroProductos").value || 0;
-    let iva = 0;
+// Genera los inputs para ingresar los precios
+function generarInputs() {
+    let numeroProductos = parseInt(document.getElementById("numeroProductos").value);
+    let lista = document.getElementById("listaPrecios");
+
+    lista.innerHTML = ""; // limpiar si ya se habían generado antes
+
+    for (let i = 0; i < numeroProductos; i++) {
+        lista.innerHTML += `
+            <div class="grupo-input">
+                <input 
+                    type="number" 
+                    min="0"
+                    id="precio${i}" 
+                    placeholder="Precio del producto #${i + 1}"
+                >
+            </div>
+        `;
+    }
+
+    lista.innerHTML += `
+        <button onclick="calculo_factura(${numeroProductos})">Calcular factura</button>
+    `;
+}
+
+// Calcula subtotal, IVA y total
+function calculo_factura(numeroProductos) {
     let subtotal = 0;
+    let iva = 0;
     let total = 0;
 
-    function PRECIOS(index) {
-        precio = document.getElementById("precio").value || 0;
+    for (let i = 0; i < numeroProductos; i++) {
+        let precio = parseFloat(document.getElementById(`precio${i}`).value) || 0;
+        subtotal += precio;
     }
 
-    function IVA(index) {
-        iva = precio * (19 / 100);
-        subtotal = subtotal + precio;
+    iva = subtotal * 0.19;
+    total = subtotal + iva;
 
-        console.log("Producto #" + (index + 1) + " = " + precio);
-    }
+    let respuesta = `
+        <p><strong>Subtotal:</strong> $${subtotal.toFixed(2)}</p>
+        <p><strong>IVA (19%):</strong> $${iva.toFixed(2)}</p>
+        <p><strong>Total a pagar:</strong> $${total.toFixed(2)}</p>
+    `;
 
-    for (let index = 0; index < numeroProductos; index++) {
-        PRECIOS(index);
-        IVA(index);
-    }
-    total = iva + subtotal;
-    console.log("subtotal: " + subtotal);
-    console.log("iva: " + iva);
-    console.log("total: " + total);
-
-
+    document.getElementById("aquiRespuesta").innerHTML = respuesta;
 }
 
 /* 10: fin_año-----
@@ -542,13 +564,35 @@ y semanas faltan para terminar el año.
 */
 
 function Fin_año() {
-    const fecha = new Date(prompt("Fecha (YYYY-MM-DD):") || new Date());
-    const dias = Math.ceil((new Date(fecha.getFullYear(), 11, 31) - fecha) / 86400000);
+    contenedorLista.innerHTML = `
+    <!-- Solo los dos inputs -->
+    <div class="formulario" id="formularioSecundario">
+        <div class="grupo-input">
+            <label for="hoy" >formato de Fecha (YYYY-MM-DD)</label><br>
+            <input 
+                type="text" 
+                id="hoy" 
+                placeholder="ingrese la fecha aqui"
+            >
+        </div>
 
-    alert(`Días: ${dias}\nSemanas: ${Math.ceil(dias / 7)}`);
+        <div>
+        <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
+            <button onclick="calcular_fin_año()" class="boton">calcular</button>
+        </div>
+        <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
+    </div>
+`;
 }
 
-function calcular_fin_año(){}
+function calcular_fin_año() {
+    let hoy = document.getElementById("hoy").value;
+    const fecha = new Date(hoy) || new Date();
+    const dias = Math.ceil((new Date(fecha.getFullYear(), 11, 31) - fecha) / 86400000);
+
+    aquiRespuesta.innerHTML = (`faltan
+        Días: ${dias}<br> Semanas: ${Math.ceil(dias / 7)}`);
+}
 
 /* 11: ---- lista_de_mercado
 Cree un listado de compras, con función que pida el número de productos, nombre 
@@ -561,77 +605,134 @@ y valordel producto por medio de otra función imprima la información digitadas
 Total Mercado 16.000
 */
 
+//  Muestra el formulario
 function lista_de_mercado() {
-    let productos = [];
-    let acumulaTotal = 0;
+    contenedorLista.innerHTML = `
+        <div class="formulario" id="formularioSecundario">
+            <div class="grupo-input">
+                <label for="nombreProducto">Nombre del producto</label>
+                <input 
+                    type="text" 
+                    id="nombreProducto" 
+                    placeholder="Ej: Arroz"
+                >
+            </div>
 
-    function reguistrar_productos() { }
-    // crea un producto nuevo, no se duplica
-    function nuevoProducto(nombre, precio, cantidad) {
-        let producto = {
-            nombre: nombre,
-            precio: precio,
-            cantidad: cantidad,
-        }
-        productos.push(producto);
-    }
+            <div class="grupo-input">
+                <label for="precioProducto">Precio unitario</label>
+                <input 
+                    type="number" 
+                    id="precioProducto" 
+                    placeholder="Ej: 2500"
+                >
+            </div>
+            
+            <div class="grupo-input">
+                <label for="cantidadProducto">Cantidad</label>
+                <input 
+                    type="number" 
+                    id="cantidadProducto" 
+                    placeholder="Ej: 2"
+                >
+            </div>
 
-    // recibe los datos de los produstos
-    for (let i = 0; i < 2; i++) {
-        let nombre = prompt("ingresa el nombre del producto #" + (i + 1));
-        let precio = prompt("ingresa el precio del producto #" + (i + 1));
-        let cantidad = prompt("ingresa la cantidad del producto #" + (i + 1));
-        nuevoProducto(nombre, precio, cantidad);
-    }
+            <div>
+            <button class="boton_eliminar" id="boton_eliminar">eliminar</button>
 
+                <button onclick="crea_lista_de_mercado()" class="boton">Agregar producto</button>
+            </div>
 
-    for (let index = 0; index < productos.length; index++) {
-        let subtotal = productos[index].precio * productos[index].cantidad
-        reguistrar_productos();
-        console.log(`el produco #${(index + 1)} - ${productos[index].nombre} vale $${productos[index].precio} * ${productos[index].cantidad} = ${subtotal}`)
-        acumulaTotal = acumulaTotal + subtotal
-    }
-
-    console.log("toral mercado: " + acumulaTotal)
-
+            <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
+        </div>
+    `;
 }
 
+//  Arreglo global (para conservar la lista de productos)
+let productos = [];
 
+//  Función para agregar productos y mostrar lista
+function crea_lista_de_mercado() {
+    // tomar los valores de los inputs
+    let nombreProducto = document.getElementById("nombreProducto").value.trim();
+    let precioProducto = parseFloat(document.getElementById("precioProducto").value) || 0;
+    let cantidadProducto = parseInt(document.getElementById("cantidadProducto").value) || 0;
+
+    if (nombreProducto === "" || precioProducto <= 0 || cantidadProducto <= 0) {
+        alert("Por favor ingresa datos válidos para todos los campos.");
+        return;
+    }
+
+    // crear un nuevo producto
+    let producto = {
+        nombre: nombreProducto,
+        precio: precioProducto,
+        cantidad: cantidadProducto,
+        subtotal: precioProducto * cantidadProducto
+    };
+
+    // agregar al arreglo global
+    productos.push(producto);
+
+    // calcular el total general
+    let totalMercado = 0;
+    productos.forEach(p => totalMercado += p.subtotal);
+
+    // mostrar los productos en pantalla
+    let salidaHTML = "<h3>Lista de mercado:</h3><ul>";
+    productos.forEach((p, i) => {
+        salidaHTML += `
+            <li>
+                #${i + 1} - ${p.nombre}: 
+                ${p.cantidad} x $${p.precio.toLocaleString()} 
+                = <strong>$${p.subtotal.toLocaleString()}</strong>
+            </li>`;
+    });
+    salidaHTML += `</ul><p><strong>Total:</strong> $${totalMercado.toLocaleString()}</p>`;
+
+    document.getElementById("aquiRespuesta").innerHTML = salidaHTML;
+
+    // limpiar los inputs
+    document.getElementById("nombreProducto").value = "";
+    document.getElementById("precioProducto").value = "";
+    document.getElementById("cantidadProducto").value = "";
+}
+
+// evento que ejecuta todas las funciones 
 botonAgregar.addEventListener('click', () => {
     let valor = nombreOpcion.value;
     switch (valor) {
         case "1":
-            superficie_del_rectangulo()
+            superficie_del_rectangulo();
             break;
         case "2":
-            velocidad()
+            velocidad();
             break;
         case "3":
-            circunferencia_circulo()
+            circunferencia_circulo();
             break;
         case "4":
-            validar_texto()
+            validar_texto();
             break;
         case "5":
-            calculadora_basica_completa()
+            calculadora_basica_completa();
             break;
         case "6":
-            conversor_de_temperatura()
+            conversor_de_temperatura();
             break;
         case "7":
-            indise_masa_muscular()
+            indise_masa_muscular();
             break;
         case "8":
-            precentaciones_con_nombre()
+            precentaciones_con_nombre();
             break;
         case "9":
-            factura()
+            factura();
             break;
         case "10":
-            Fin_año()
+            Fin_año();
             break;
         case "11":
-            lista_de_mercado()
+            lista_de_mercado();
             break;
         case "0":
             alert("porfavor elija una opcion")
@@ -641,32 +742,18 @@ botonAgregar.addEventListener('click', () => {
     }
 })
 
-
-/*
-
-contenedorLista.innerHTML = `
-    <!-- Solo los dos inputs -->
-    <div class="formulario" id="formularioSecundario">
-        <div class="grupo-input">
-            <input 
-                type="number" 
-                id="input1" 
-                placeholder="Escribe aquí el numero 1"
-            >
-        </div>
-
-        <div class="grupo-input">
-            <input 
-                type="number" 
-                id="input2" 
-                placeholder="Escribe aquí el nuemero 2"
-            >
-        </div>
-        <div>
-            <button onclick="superficie_del_rectangulo()">calcular</button>
-        </div>
-        <div id="aquiRespuesta" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
-    </div>
-`;
-
-*/
+// limpiar
+// Escucha en el contenedor padre (que SÍ existe desde el inicio)
+contenedorLista.addEventListener('click', (e) => {
+    if (e.target.id === 'boton_eliminar') {
+        let formularioSecundario = document.getElementById('formularioSecundario');
+        if (confirm('¿Estás seguro de eliminar este formulario?')) {
+            // Usuario presionó "Aceptar" (Sí)
+            formularioSecundario.remove();
+            console.log("Formulario eliminado");
+        } else {
+            // Usuario presionó "Cancelar" (No)
+            console.log("Operación cancelada");
+        }
+    }
+});
