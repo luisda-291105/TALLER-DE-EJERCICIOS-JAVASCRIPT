@@ -23,26 +23,59 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link " href="taller1.html">taller 1</a>
+                            <!-- Button trigger modal taller 4-->
+                            <a class="nav-link " data-bs-toggle="modal" data-bs-target="#exampleModal">correr codigo de
+                                los talleres</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="taller2.html">taller 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="taller3.html">taller 3</a>
-                        </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="#">Area</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="">Alumnos</a>
-                        </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- Modal taller 4 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Menú de Opciones</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-10 col-lg-8">
+                                <div class="mb-3">
+                                    <select class="form-select" id="nombreOpcion">
+                                        <option value="0" hidden>Elige una opción</option>
+                                        <option value="1">Superficie del rectángulo</option>
+                                        <option value="2">De km a ms y mph</option>
+                                        <option value="3">Circunferencia círculo</option>
+                                        <option value="4">Validar Texto</option>
+                                        <option value="5">Calculadora básica</option>
+                                        <option value="6">Conversor de temperatura</option>
+                                        <option value="7">Índice masa muscular</option>
+                                        <option value="8">Presentaciones con nombre</option>
+                                        <option value="9">Factura</option>
+                                        <option value="10">Calcular Fin Año</option>
+                                        <option value="11">Lista de mercado</option>
+                                    </select>
+                                </div>
+                                <div id="contenedorLista">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="botonAgregar">Agregar Opción</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <main class="container">
         <!-- titulo del proyecto -->
         <section class="text-center my-5">
@@ -357,6 +390,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
