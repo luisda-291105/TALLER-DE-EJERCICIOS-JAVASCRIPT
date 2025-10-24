@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+            data-bs-target="#descripcionArray">¿Que es un array?</button>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+            data-bs-target="#adescripcionObjeto">¿Que es un objeto?</button>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#diferencia">¿Cual
+            es la diferencia?</button>
+    </div>
+
+    <!-- array -->
+    <div class="modal fade" id="descripcionArray" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Que es un array?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <p>
+                        Un <strong>array</strong> (también llamado <em>arreglo</em>) es una estructura de datos que
+                        permite almacenar varios valores en una sola variable.
+                        Cada valor dentro del array se guarda en una posición llamada
+                        <strong>índice</strong>, y estos índices comienzan desde el número <strong>0</strong>.
+                    </p>
+
+                    <p>
+                        Por ejemplo, si quieres guardar varios nombres sin usar muchas variables,
+                        puedes hacerlo así en JavaScript:
+                    </p>
+
+                    <pre>
+<code>
+    let nombres = ["Ana", "Luis", "María", "Carlos"];
+</code>
+</pre>
+
+                    <p>
+                        En este caso:
+                    <ul>
+                        <li><code>nombres[0]</code> contiene "Ana"</li>
+                        <li><code>nombres[1]</code> contiene "Luis"</li>
+                        <li><code>nombres[2]</code> contiene "María"</li>
+                        <li><code>nombres[3]</code> contiene "Carlos"</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                        Los arrays son muy útiles cuando necesitas trabajar con grupos de datos,
+                        como listas de productos, números, usuarios o cualquier colección de elementos
+                        que tengan algo en común.
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- objeto -->
+    <div class="modal fade" id="adescripcionObjeto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Que es un objeto?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Un <strong>objeto</strong> es una estructura de datos que permite almacenar información
+                        en forma de <em>pares clave–valor</em>.
+                        Esto significa que cada dato dentro del objeto tiene un <strong>nombre</strong> (la clave)
+                        y un <strong>valor</strong> asociado.
+                    </p>
+
+                    <p>
+                        Los objetos son muy útiles para representar cosas del mundo real,
+                        como una persona, un producto o un auto, ya que pueden tener
+                        diferentes características (propiedades) y comportamientos (métodos).
+                    </p>
+
+                    <p>Por ejemplo, en JavaScript puedes crear un objeto así:</p>
+
+                    <pre>
+<code>
+let persona = {
+    nombre: "Luis",
+    edad: 19,
+    ciudad: "Medellín",
+    saludar: function() {
+        return "Hola, mi nombre es " + this.nombre;
+    }
+};
+</code>
+</pre>
+
+                    <p>
+                        En este ejemplo:
+                    <ul>
+                        <li><code>nombre</code>, <code>edad</code> y <code>ciudad</code> son
+                            <strong>propiedades</strong>.
+                        </li>
+                        <li><code>saludar()</code> es un <strong>método</strong> (una función dentro del objeto).</li>
+                    </ul>
+                    </p>
+
+                    <p>
+                        Puedes acceder a los valores de un objeto usando el punto (<code>.</code>),
+                        por ejemplo: <code>persona.nombre</code> devolverá <strong>"Luis"</strong>.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- diferencia -->
+    <div class="modal fade" id="diferencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">¿Cual es la diferencia?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Aunque los <strong>arrays</strong> y los <strong>objetos</strong> son estructuras de datos
+                        en JavaScript que permiten almacenar información,
+                        se usan para propósitos diferentes y tienen formas distintas de organizar los datos.
+                    </p>
+
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Característica</th>
+                                <th>Array</th>
+                                <th>Objeto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Estructura</strong></td>
+                                <td>Lista ordenada de valores con índices numéricos.</td>
+                                <td>Pares <em>clave–valor</em> con nombres personalizados.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Acceso</strong></td>
+                                <td><code>frutas[0]</code></td>
+                                <td><code>persona.nombre</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ejemplo</strong></td>
+                                <td><code>let frutas = ["Manzana", "Banana", "Cereza"];</code></td>
+                                <td><code>let persona = { nombre: "Luis", edad: 19 };</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Orden</strong></td>
+                                <td>Los elementos tienen posiciones (0, 1, 2...)</td>
+                                <td>El orden no importa; cada propiedad tiene su nombre.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Uso común</strong></td>
+                                <td>Listas o colecciones de datos similares.</td>
+                                <td>Representar entidades con atributos y métodos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="mt-3">
+                        En resumen, usa un <strong>array</strong> para listas ordenadas y un <strong>objeto</strong>
+                        para describir cosas con varias propiedades.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
