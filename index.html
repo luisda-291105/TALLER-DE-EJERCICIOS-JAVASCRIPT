@@ -23,9 +23,14 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
+                            <!-- Button trigger modal taller 1-->
+                            <a class="nav-link " data-bs-toggle="modal" data-bs-target="#modalTaller1">correr codigo de
+                                los taller 1</a>
+                        </li>
+                        <li class="nav-item">
                             <!-- Button trigger modal taller 4-->
-                            <a class="nav-link " data-bs-toggle="modal" data-bs-target="#exampleModal">correr codigo de
-                                los talleres</a>
+                            <a class="nav-link " data-bs-toggle="modal" data-bs-target="#modalTaller4">correr codigo de
+                                los taller 4</a>
                         </li>
                     </ul>
                 </div>
@@ -33,8 +38,74 @@
         </nav>
     </header>
 
+    <!-- Modal taller 1 -->
+    <div class="modal  fade" tabindex="-1" id="modalTaller1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal taller 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container mt-5">
+                        <h2 class="text-center mb-4">🧮 Menú <strong>taller 1</strong></h2>
+
+                        <div class="card shadow p-4">
+                            <div class="row g-3 text-center" id="contenedorOpciones">
+
+                                <div class="col-md-4">
+                                    <button class="btn btn-primary w-100" onclick="input_calculadora()"><i
+                                            class="bi bi-calculator"></i> calculadora</button>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <button class="btn btn-success w-100" value="salario">💰 Calcular Salario</button>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <button class="btn btn-dark w-100" value="precio_iva">🛒 Precio + IVA</button>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <button class="btn btn-outline-primary w-100" value="alumnos">👨‍🏫 Alumnos</button>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <button class="btn btn-outline-success w-100" value="area_triangulo">🔺 Área
+                                        Triángulo</button>
+                                </div>
+
+                                <div class="col-md-4 mx-auto">
+                                    <button class="btn btn-outline-danger w-100" value="">📘 Promedio de
+                                        Notas</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Resultado -->
+                    <div class="container">
+                        <div class="my-4 text-center row" id="resultado">
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-danger" onclick="limpiar_salida_taller_1()"
+                            type="limpiar">Limpiar
+                            salida</button>
+                        <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal taller 4 -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalTaller4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -42,45 +113,46 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-10 col-lg-8">
-                                <div class="mb-3">
-                                    <select class="form-select" id="nombreOpcion">
-                                        <option value="0" hidden>Elige una opción</option>
-                                        <option value="1">Superficie del rectángulo</option>
-                                        <option value="2">De km a ms y mph</option>
-                                        <option value="3">Circunferencia círculo</option>
-                                        <option value="4">Validar Texto</option>
-                                        <option value="5">Calculadora básica</option>
-                                        <option value="6">Conversor de temperatura</option>
-                                        <option value="7">Índice masa muscular</option>
-                                        <option value="8">Presentaciones con nombre</option>
-                                        <option value="9">Factura</option>
-                                        <option value="10">Calcular Fin Año</option>
-                                        <option value="11">Lista de mercado</option>
-                                    </select>
-                                </div>
-                                <div id="contenedorLista">
-                                    
-                                </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10 col-lg-8">
+                            <div class="mb-3">
+                                <select class="form-select" id="nombreOpcion">
+                                    <option value="0" hidden>Elige una opción</option>
+                                    <option value="1">Superficie del rectángulo</option>
+                                    <option value="2">De km a ms y mph</option>
+                                    <option value="3">Circunferencia círculo</option>
+                                    <option value="4">Validar Texto</option>
+                                    <option value="5">Calculadora básica</option>
+                                    <option value="6">Conversor de temperatura</option>
+                                    <option value="7">Índice masa muscular</option>
+                                    <option value="8">Presentaciones con nombre</option>
+                                    <option value="9">Factura</option>
+                                    <option value="10">Calcular Fin Año</option>
+                                    <option value="11">Lista de mercado</option>
+                                </select>
+                            </div>
+                            <div id="contenedorLista">
+
                             </div>
                         </div>
-                    
-
+                    </div>
                 </div>
                 <div class="modal-footer">
+                    <button class="btn btn-outline-danger" onclick="limpiar_salida_taller_4()" type="limpiar">Limpiar
+                        salida</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" id="botonAgregar">Agregar Opción</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- conetedor de preguntas de los talleres -->
     <main class="container">
         <!-- titulo del proyecto -->
         <section class="text-center my-5">
             <h1 id="title">TALLER DE EJERCICIOS JS</h1>
-            <p class="modoCalculator">modo calculo basico</p>
         </section>
 
         <!-- taller 1 -->
@@ -88,9 +160,11 @@
             <h2>Taller 1</h2>
             <ol class="d-flex flex-column gap-3">
                 <li>calcular el salario de un empleado que gana X monto
-                    descuente el 4% en salud y 5% en pension </li>
+                    descuente el 4% en salud y 5% en pension
+                </li>
                 <li>aplique la formula a=(b*h)/2 para calcular el area de un triangulo donde sus dimenciones
-                    base y altura se deben pedir al usuario que los digite</li>
+                    base y altura se deben pedir al usuario que los digite
+                </li>
                 <li>realize las operaciones:
                     <ul>
                         <li>sumar</li>
@@ -103,12 +177,15 @@
                 </li>
                 <li>calcule el sueldo mensual de un trabajador ingresando el numero de
                     horas trabajadas en el mes y el valor tanto de las horas normales
-                    de trabajos y las horas extras</li>
+                    de trabajos y las horas extras
+                </li>
                 <li>digite el ingreso del precio de un producto y se debe calcular el iva,
                     mostrar cuanto es el iva que se agrega, mostrar el precio del producto
-                    sin iva y el total a pagar</li>
+                    sin iva y el total a pagar
+                </li>
                 <li>calcule el porcentaje de alumnos de un salon de clases , digitando el total de alumnos
-                    hombre y mujeres</li>
+                    hombre y mujeres
+                </li>
                 <li>calcule el promedio de 3 notas de un alumno , el rango de cada nota es del 1 al 5</li>
             </ol>
         </section>
@@ -124,7 +201,8 @@
                     saber
                     cuál
                     es
-                    el dia de la semana correspondiente al número digitado</li>
+                    el dia de la semana correspondiente al número digitado
+                </li>
                 <li>Se necesita clasificar la etapa de una persona solo pidiéndole como dato su edad:
                     <ul>
                         <li>Si la edad es menor de 18 es adolente</li>
@@ -156,7 +234,8 @@
                     </ul>
                 </li>
                 <li> Calcula la edad actual de una persona a partir de su fecha de nacimiento.
-                    Los datos a pedir son: día, mes y año de nacimiento.</li>
+                    Los datos a pedir son: día, mes y año de nacimiento.
+                </li>
                 <li>
                     <div class="row gap-2">
                         <div class="col-md-5 col-sm-12">Calcula cuánto se debe pagar por costos de
@@ -182,25 +261,34 @@
             <h2>Taller 3</h2>
             <ol class="d-flex flex-column gap-3 ">
                 <li>Hacer un programa que calcule la suma de los N primeros números naturales, dónde N es el número
-                    límite ingresado.</li>
-                <li>Hacer un programa que pida el nombre de un estudiante y N notas, calcular el promedio de las notas y
-                    determinar si el estudiante aprueba o reprueba; (Aprueba con un promedio de 3). </li>
-                <li>Ingrese varios números enteros, muestre la cantidad de números ingresados y la suma de los mismos.
-                    Realice esta acción hasta que el usuario ingrese la palabra FIN.</li>
+                    límite ingresado.
+                </li>
+                <li>Hacer un programa que pida el nombre de un estudiante y N notas, calcular el promedio de las
+                    notas y
+                    determinar si el estudiante aprueba o reprueba; (Aprueba con un promedio de 3).
+                </li>
+                <li>Ingrese varios números enteros, muestre la cantidad de números ingresados y la suma de los
+                    mismos.
+                    Realice esta acción hasta que el usuario ingrese la palabra FIN.
+                </li>
                 <li>realice una tabla de multiplicar con cualquier número ingresado hasta el 30.</li>
                 <li>Cree la tabla de multiplicar de cualquier número ingresado de manera descendente</li>
                 <li>Cree un ciclo que cuente del 1 al 30 en intervalos el número ingresado.</li>
-                <li>Cree un ciclo que cuente del 1 al 30 en intervalos el número ingresado, de manera regresiva.</li>
+                <li>Cree un ciclo que cuente del 1 al 30 en intervalos el número ingresado, de manera regresiva.
+                </li>
                 <h3>Ejercicios con estructuras repetitivas anidadas</h3>
-                <li>Digite un número (altura) y a partir de él cree una escalera de asteriscos o el carácter que desee;
+                <li>Digite un número (altura) y a partir de él cree una escalera de asteriscos o el carácter que
+                    desee;
                     con esa altura. Deberá quedar así, si ponemos una altura de 5
                     <img src="img/forma_asendente.png" alt="">
                 </li>
-                <li>Digite un número (altura) y a partir de él cree una escalera invertida de asteriscos o el carácter
+                <li>Digite un número (altura) y a partir de él cree una escalera invertida de asteriscos o el
+                    carácter
                     que desee; con esa altura. Deberá quedar así, si ponemos una altura de 5.
                     <img src="img/forma_desendente.png" alt="">
                 </li>
-                <li>Cree un programa que permite registrar el número de compras que se venden cada día. pedir al usuario
+                <li>Cree un programa que permite registrar el número de compras que se venden cada día. pedir al
+                    usuario
                     cuantos productos va a comprar y registrar el precio unitario, calcular el valor total de cada
                     compra y al finalizar el día calcular cuántas facturas se hicieron y el total general.
                     <div>
@@ -243,10 +331,14 @@
                     <img src="img/cuadrilla_numerica.png" alt="">
                 </li>
                 <h3>Ejercicios con estructuras repetitivas con condicionales.</h3>
-                <li>Cree un programa que pida la edad a 10 estudiantes y determine cuántos son menores de edad y cuales
-                    son mayores de edad.</li>
-                <li>Utiliza la función Math.ramdon() para generar un número aleatorio y compararlo con el que el usuario
-                    digite. tienes 3 intentos para acertar. </li>
+                <li>Cree un programa que pida la edad a 10 estudiantes y determine cuántos son menores de edad y
+                    cuales
+                    son mayores de edad.
+                </li>
+                <li>Utiliza la función Math.ramdon() para generar un número aleatorio y compararlo con el que el
+                    usuario
+                    digite. tienes 3 intentos para acertar.
+                </li>
             </ol>
         </section>
 
@@ -293,9 +385,11 @@
                         <li>Si la Temperatura es menos 0°C o 32°F : Nos congelamos</li>
                         <li> Si la Temperatura es entre de 5°C a 15°C o 33°F a 50°F : Esta haciendo frio</li>
                         <li>Si la Temperatura es entre de 16°C a 25°C o 51°F a 77°F : Está
-                            templado el dia</li>
+                            templado el dia
+                        </li>
                         <li>Si la Temperatura es más de 26°C o 78°F : Tiene fiebre o es el
-                            apocalipsis.</li>
+                            apocalipsis.
+                        </li>
                     </ul>
                 </li>
                 <li>
@@ -346,6 +440,112 @@
             </ol>
         </section>
 
+        <!-- taller 5 -->
+        <section class="justify-content-center my-5">
+            <h2>Taller 5</h2>
+
+            <h3 class="h5 mt-3">Ejercicios con arrays.</h3>
+            <ol class="d-flex flex-column gap-3 ">
+                <li>
+                    onsulte qué son los arrays y explique en qué se diferencian los arrays de los objetos
+                </li>
+                <li>
+                    Menciona por lo menos 1 propiedades y 3 funciones que tienen integrados los arrays. Realice un
+                    ejemplo de cada uno.
+                </li>
+                <li>
+                    Realiza 1 ejercicio explicando cómo funcionan los métodos push(), pop(), slice() y splice(),
+                    reduce(), indexOf(), forEach(), map(), sort().
+                </li>
+                <li>
+                    Crea un array con nombres de frutas e imprime los datos en html por medio de un ciclo.
+                </li>
+                <li>
+                    Cree un array con 3 elementos inicialmente y después agregue 2 elementos más, imprima en html
+                    todo los elementos.
+                </li>
+
+                <li>
+                    Del siguiente arreglo [3,5,9,10,35,42,12,22,25] mostrar en html cual es el primer número, el
+                    último, el del centro.
+                </li>
+                <li>
+                    Del siguiente arreglo [3,5,9,10,35,42,12,22,25] mostrar en html cuales y cuantos son los números
+                    pares y los impares.
+                </li>
+                <li>
+                    Del siguiente arreglo [tomate,banano,manzana,pera,cebolla,papa,fresas,Ajo,Sandía] mostrar en html
+                    en cual posición se encuentran las frutas y en cual posición las verduras
+
+                </li>
+                <li>
+                    Del siguiente arreglo [29,5,40,10,35,42,12,22,25,1,3] mostrar en html los elementos organizados
+                    de forma ascendente
+                </li>
+                <li>
+                    Del siguiente arreglo [29,5,40,10,35,42,12,22,25,1,3] mostrar en html los elementos organizados
+                    de forma descendente.
+                </li>
+                <li>
+                    Del siguiente arreglo [2,4,6,8,10,12,14,16,18,20,22] mostrar en html los elementos ordenados
+                    aleatoriamente.
+                </li>
+                <li>
+                    arreglo 1: [3,5,9,10,35,42,12,22,25], arreglo 2: [9,5,33,12,7,20,22,3,8] de los anteriores arreglos
+                    mostrar en forma de (tabla de multiplicar) la suma de los elementos del arreglo 1 con los elementos
+                    del arreglo 2 también sumar el total de cada arreglo.
+                    <div class="my-2">
+                        <h4 class="h6">resultado</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">3 + 9 = 12</li>
+                            <li class="list-group-item">5 + 5 = 10</li>
+                            <li class="list-group-item">9 + 33 = 42</li>
+                            <li class="list-group-item">10 + 12 = 22</li>
+                            <li class="list-group-item">35 + 7 = 42</li>
+                            <li class="list-group-item">42 + 20 = 62</li>
+                            <li class="list-group-item">12 + 22 = 34</li>
+                            <li class="list-group-item">22 + 3 = 25</li>
+                            <li class="list-group-item">25 + 8 = 33</li>
+                            <li class="list-group-item">163 + 119 = 282</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+
+            <h3 class="h5 mt-3">Ejercicios con objetos.</h3>
+            <ol>
+                <li>
+                    Cree el siguiente objeto {“v1”:”tomate”,”v2”:”Cebolla”,”v3”: “Ajo”} y muestre en el navegador
+                    solo los valores.
+                </li>
+                <li>
+                    Cree el siguiente objeto {“v1”:”tomate”,”v2”:”Cebolla”,”v3”: “Ajo”} y muestre en el navegador
+                    solo las referencias o llaves
+                </li>
+                <li>
+                    3. Cree el siguiente objeto {“v1”:”tomate”,”v2”:”Cebolla”,”v3”: “Ajo”} y muestre en el navegador
+                    llaves y valores.
+                </li>
+                <li>
+                    Cree el siguiente objeto {“v1”:”tomate”,”v2”:”Cebolla”,”v3”: “Ajo”} agregue 2 verduras más y
+                    muestre los valores en el navegador
+                </li>
+                <li>
+                    del siguiente objeto { nombre, precio, cantidad} lléne sus valores dinámicamente con mínimo 3
+                    productos y muestre sus datos en el navegador.
+                </li>
+                <li>
+                    del siguiente objeto { nombre, precio, cantidad} llene sus valores dinámicamente con mínimo 3
+                    productos y muestre sus datos en el navegador
+                </li>
+                <li>
+                    del siguiente objeto { producto, precio, cantidad} llene sus valores dinámicamente con mínimo 2
+                    productos y muestre el subtotal a pagar de los 3 productos y el total de la compra con el iva
+                    aumentado
+                </li>
+            </ol>
+        </section>
+
     </main>
 
     <footer class="border-top pt-4">
@@ -372,7 +572,8 @@
                         <li><a class="text-decoration-none text-dark" href="">calcular iva de producto</a></li>
                         <li><a class="text-decoration-none text-dark" href="">promedio de alumnos</a></li>
                         <li><a class="text-decoration-none text-dark" href="">promedio de notas</a></li>
-                        <li><a class="text-decoration-none text-dark" href="">Calcular el area de un triangulo</a></li>
+                        <li><a class="text-decoration-none text-dark" href="">Calcular el area de un triangulo</a>
+                        </li>
                     </ul>
                 </section>
                 <section class="col-sm-6 col-md-3 text-center my-2">
@@ -390,7 +591,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-        <script src="main.js"></script>
+    <script src="main.js"></script>
+    <!-- <script src="js/taller1.js"></script> -->
 </body>
 
 </html>

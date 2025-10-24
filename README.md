@@ -251,12 +251,93 @@ Ejercicios enfocados en la creación y uso de funciones con parámetros, retorno
     Total Mercado: $16.000
 ```
 
+## 📋 TALLER 5 - ARRAY Y OBJETOS
+
+### Ejercicios con arrays
+
+1. **Diferencia entre objetos y array**
+Consulte qué son los arrays y explique en qué se diferencian los arrays de los objetos.
+
+2. **Propiedades y funciones**
+Menciona por lo menos 1 propiedades y 3 funciones que tienen integrados los arrays. Realice un ejemplo de cada uno.
+
+3. **Metodos**
+Realiza 1 ejercicio explicando cómo funcionan los métodos push(), pop(), slice() y splice(), reduce(), indexOf(), forEach(), map(), sort().
+
+4. **Array de frutas e imprimir**
+Crea un array con nombres de frutas e imprime los datos en html por medio de un ciclo.
+
+5. **Array con 3 elementos**
+Cree un array con 3 elementos inicialmente y después agregue 2 elementos más, imprima en html todo los elementos.
+
+6. **Pociciones en el arreglo**
+Del siguiente arreglo [3,5,9,10,35,42,12,22,25] mostrar en html cual es el primer número, el último, el del centro.
+
+7. **pares e impares**
+Del siguiente arreglo [3,5,9,10,35,42,12,22,25] mostrar en html cuales y cuantos son los números pares y los impares.
+
+8. **Clasificar verduras y frutas**
+Del siguiente arreglo [tomate,banano,manzana,pera,cebolla,papa,fresas,Ajo,Sandía] mostrar en html en cual posición se encuentran las frutas y en cual posición las verduras.
+
+9. **Mostrar de forma asendente**
+Del siguiente arreglo [29,5,40,10,35,42,12,22,25,1,3] mostrar en html los elementos organizados de forma ascendente.
+
+10. **Mostrar de forma desendente**
+Del siguiente arreglo [29,5,40,10,35,42,12,22,25,1,3] mostrar en html los elementos organizados de forma descendente.
+
+11. **Mostrar de manera aleatoria**
+Del siguiente arreglo [2,4,6,8,10,12,14,16,18,20,22] mostrar en html los elementos ordenados aleatoriamente.
+
+12. **Calcular con los arreglos**
+arreglo 1: [3,5,9,10,35,42,12,22,25], arreglo 2: [9,5,33,12,7,20,22,3,8] de los anteriores arreglos mostrar en forma de (tabla de multiplicar) la suma de los elementos del arreglo 1 con los elementos del arreglo 2 también sumar el total de cada arreglo.
+
+**Resultado:**
+
+```
+3 + 9 = 12
+5 + 5 = 10
+9 + 33 = 42
+10 + 12 = 22
+35 + 7 = 42
+42 + 20 = 62
+12 + 22 = 34
+22 + 3 = 25
+25 + 8 = 33
+163 + 119 = 282
+```
+
+### Ejercicios con objetos
+
+1. **Mostrar valores**
+Cree el siguiente objeto `{"v1":"tomate","v2":"Cebolla","v3": "Ajo"}` y muestre en el navegador solo los valores.
+
+2. **Mostar llaves**
+Cree el siguiente objeto `{"v1":"tomate","v2":"Cebolla","v3": "Ajo"}` y muestre en el navegador solo las referencias o llaves.
+
+3. **Mostrar llaves y valores**
+Cree el siguiente objeto `{"v1":"tomate","v2":"Cebolla","v3": "Ajo"}` y muestre en el navegador llaves y valores.
+
+4. **Agregar 2 verduras**
+Cree el siguiente objeto `{"v1":"tomate","v2":"Cebolla","v3": "Ajo"}` agregue 2 verduras más y muestre los valores en el navegador.
+
+5. **Agregar valores**
+Del siguiente objeto `{ nombre, precio, cantidad}` llene sus valores dinámicamente con mínimo 3 productos y muestre sus datos en el navegador.
+
+6. **Igual que la 5**
+Del siguiente objeto `{ nombre, precio, cantidad}` llene sus valores dinámicamente con mínimo 3 productos y muestre sus datos en el navegador.
+
+7. **Agregar valores y mostrar total con iva**
+Del siguiente objeto `{ producto, precio, cantidad}` llene sus valores dinámicamente con mínimo 2 productos y muestre el subtotal a pagar de los 3 productos y el total de la compra con el iva aumentado.
+
+
 ## 🧰 Tecnologías Utilizadas
 
 - HTML5
 - CSS3
 - JavaScript (puro / Vanilla JS)
 - GitHub Pages (para la publicación)
+
+
 
 ## ✨ Autor
 
