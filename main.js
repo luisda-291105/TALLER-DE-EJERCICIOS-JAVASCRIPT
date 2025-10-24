@@ -1,10 +1,367 @@
-// Variables globales
+
+
+/* 
+_____________________________
+___| variables globales |____
+_____________________________
+*/
+
+// Contador para IDs únicos
+let contadorFormularios = 0;
+
+// respuestas dentro de las funciones
+let r;
+
+// // taller 1 
+// let contenedorOpciones = document.querySelector("#contenedorOpciones");
+// let resultado = document.getElementById("resultado");
+// let respuestaOperacion = document.getElementById("respuestaOperacion");
+// activo la clase del taller 1
+// let taller_1_nuevo = new taller_1();
+
+// taller 4
 let nombreOpcion = document.getElementById("nombreOpcion");
 let botonAgregar = document.getElementById("botonAgregar");
 let contenedorLista = document.getElementById("contenedorLista");
 
-// Contador para IDs únicos
-let contadorFormularios = 0;
+
+
+/* 
+___________________
+___| TALLER 1 |____
+___________________
+*/
+class taller_1 {
+    constructor(input1, input2, select) {
+        this.input1 = input1;
+        this.input2 = input2;
+        this.select = select.value
+    }
+    // 1: calcular salario  
+    calculo_salario() {
+
+        const horas = Number(prompt("cuantas horas trabajas al dia: "));
+        const horaExtras = Number(prompt("trabajaste cuantas horas extras: "));
+        const pagosHora = Number(prompt("cuanto te pagan por hora:"));
+
+        const horaMes = horas * 30;
+        const totalHorasTrabajada = horaMes + horaExtras;
+        const valorHoraTotal = pagosHora * totalHorasTrabajada;
+
+        let pension = valorHoraTotal * 5 / 100;
+        let salud = valorHoraTotal * 4 / 100;
+        let salarioNetoDescuento = valorHoraTotal - pension - salud;
+
+        resultado.textContent = (
+            `${horas}h al dia
+        +  ${horaExtras}h extra,
+        pagos por hora ${pagosHora}
+        en total trabajaste ${totalHorasTrabajada} horas
+        y ganaste ${valorHoraTotal}$ cop.
+        - salud 4% y pension 5%,
+        pension  ${pension}$ cop + salud ${salud}$ cop,
+        el ingreso neto es ${salarioNetoDescuento}$ cop
+        `);
+    };
+
+    // 2: calcular area tiangulo
+    calculo_area_triangulo() {
+        let numero1 = Number(prompt("porfavor ingrese el primer numero"));
+        let numero2 = Number(prompt("ingrese el segundo numero"));
+
+        resultado.textContent = ("el area del triangulo es: " + ((numero1 * numero2) / 2));
+    };
+
+    // 3: calculadora
+
+    calculadora() {
+
+        let select = document.getElementById("select");
+        let input1 = parseFloat(document.getElementById("numero_${idUnico}").value || 0);
+        let input2 = parseFloat(document.getElementById("numero_${idUnico}").value || 0);
+        if (select != "" || input1 != 0 || input2 != 0) {
+
+        
+        switch (select) {
+            case "suma":
+                r = input1 + input2;
+                document.getElementById("respuesta_${idUnico}").textContent = `la respuesta es ${r}`;
+                break;
+            case "resta":
+                r = input1 - input2;
+                document.getElementById("respuesta_${idUnico}").textContent = `la respuesta es ${r}`;
+                break;
+            case "divicion":
+                if (input2 != 0) {
+                    r = input2 / input1;
+                    document.getElementById("respuesta_${idUnico}").textContent = `la respuesta es ${r}`;
+                } else {
+                    document.getElementById("respuesta_${idUnico}").textContent = ` no puedes dividir ${input1} entre  ${input2} `;
+                }
+                break;
+            case "multiplicacion":
+                r = input1 * input2;
+                document.getElementById("respuesta_${idUnico}").textContent = `la respuesta es ${r}`;
+                break;
+            case "modulo":
+                r = input1 % input2;
+                document.getElementById("respuesta_${idUnico}").textContent = `la respuesta es ${r}`;
+                break;
+
+            default:
+                alert("algo salio muy mal");
+                break;
+        }
+    }
+    }
+
+    // 4: sueldo mensual
+
+    calculo_salario() {
+
+        const horas = Number(prompt("cuantas horas trabajas al dia: "));
+        const horaExtras = Number(prompt("trabajaste cuantas horas extras: "));
+        const pagosHora = Number(prompt("cuanto te pagan por hora:"));
+
+        const horaMes = horas * 30;
+        const totalHorasTrabajada = horaMes + horaExtras;
+        const valorHoraTotal = pagosHora * totalHorasTrabajada;
+
+        let pension = valorHoraTotal * 5 / 100;
+        let salud = valorHoraTotal * 4 / 100;
+        let salarioNetoDescuento = valorHoraTotal - pension - salud;
+
+        resultado.textContent = (
+            `${horas}h al dia
+        +  ${horaExtras}h extra,
+        pagos por hora ${pagosHora}
+        en total trabajaste ${totalHorasTrabajada} horas
+        y ganaste ${valorHoraTotal}$ cop.
+        - salud 4% y pension 5%,
+        pension  ${pension}$ cop + salud ${salud}$ cop,
+        el ingreso neto es ${salarioNetoDescuento}$ cop
+        `);
+    }
+
+    // 5: calculo de iva
+
+    calculo_precio_iva() {
+        let preceProduct = Number(prompt("porfavor agrege el precio del producto"));
+        let iva = 19 / 100;
+
+        let preceProductIva = preceProduct + iva;
+        resultado.textContent = (`el valor del producto es ${preceProduct}
+        el iva ha agregar ${iva} %
+        total producto + iva ${preceProductIva}
+        `)
+    };
+
+    // 6: porcentaje de alumnos
+
+    calculo_alumno() {
+        let boy = Number(prompt("ingrese el numero de estudiantes del genero masculino"));
+        let girl = Number(prompt("ingrese el numero de estudiantes del genero femenido"));
+
+        let alumnos = boy + girl;
+
+        let percentageBoy = boy / alumnos;
+        let percentageGirl = girl / alumnos;
+
+        let percentageBoyFinal = percentageBoy * 100;
+        let percentagegirlFinal = percentageGirl * 100;
+
+        resultado.textContent = (`el total de alumnos es ${alumnos}
+        el numero de hombre es ${boy} en promedio ${percentageBoyFinal}%
+        el numero de mujeres es ${girl} en promedio ${percentagegirlFinal}%
+        `)
+    };
+
+    // 7: promedio de 3 notas
+
+    calculo_promedio_notas() {
+        let nota1 = Number(prompt("ingrese la nota"));
+        let nota2 = Number(prompt("ingrese la nota"));
+        let nota3 = Number(prompt("ingrese la nota"));
+
+        let promedio = (nota1 + nota2 + nota3) / 3;
+        resultado.textContent = ("el promedio de la nota del alumno es: " + promedio)
+    };
+
+}
+
+
+
+function input_calculadora() {
+
+    contadorFormularios++
+    const idUnico = `${contadorFormularios}`
+    document.getElementById("resultado").innerHTML += `
+            <div class="card shadow my-5 mx-auto col-sm-10 col-md-6 col-lg-3" id="${idUnico}">
+                <div class="card-header">
+                    operacion #${idUnico} calculadora
+                </div>
+                <div class="card-body gap-3 d-flex flex-column">
+                    <div class="input-group flex-nowrap">
+                        <input type="number" 
+                        class="form-control" 
+                        placeholder="ingrese el segundo numero" 
+                        min="0"
+                        id="numero_${idUnico}">
+                    </div>
+                    <div>
+                        <select id="select" class="form-control w-100">
+                            <option value="suma">suma</option>
+                            <option value="resta">resta</option>
+                            <option value="divicion">divicion</option>
+                            <option value="multiplicacion">multiplicacion</option>
+                            <option value="modulo">modulo</option>
+                        </select>
+                    </div>
+                    <div class="input-group flex-nowrap">
+                        <input type="number" 
+                        class="form-control" 
+                        placeholder="ingrese el segundo numero" 
+                        min="0"
+                        id="numero_${idUnico}">
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-success" onclick="" type="button">Calcular</button>
+                        <button class="btn btn-outline-danger boton_eliminar" data-form-id="${idUnico}"  type="limpiar">Eliminar</button>
+                    </div>
+                    <div>
+                        <p id="respuesta_${idUnico}"></p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+
+};
+
+/* 
+function calculo_resta() {
+    nombreOperacion = "resta";
+    contadorOperacion++
+    document.getElementById("resultado").innerHTML += `
+    <div class="card shadow my-5 mx-auto col-sm-10 col-md-6 col-lg-3">
+        <div class="card-header">
+            operacion #${contadorOperacion} ${nombreOperacion}
+        </div>
+        <div class="card-body gap-3 d-flex flex-column">
+            <div class="input-group flex-nowrap">
+                <input type="number" class="form-control" placeholder="ingrese el segundo numero" min="0"
+                    id="numero1" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div class="input-group flex-nowrap">
+                <input type="number" class="form-control" placeholder="ingrese el segundo numero" min="0"
+                    id="numero1" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div>
+                <button class="btn btn-outline-success" onclick="d()" type="button">Calcular</button>
+                <button class="btn btn-outline-danger" onclick="limpiar()" type="limpiar">Eliminar</button>
+            </div>
+            <div id="respuestaOperacion"></div>
+        </div>
+    </div>
+    `;
+};
+
+function calculo_multi() {
+    respuesa = imput2 + imput1;
+};
+
+function calculo_divide() {
+    if (numero2 != 0) {
+        respuesa = imput2 / imput1;
+    } else {
+        alert("no puedes dividir entre cero '0'")
+    }
+
+};
+
+function calculo_modulo() {
+    respuesa = imput2 + imput1;
+};
+
+function calculo_salario() {
+
+    const horas = Number(prompt("cuantas horas trabajas al dia: "));
+    const horaExtras = Number(prompt("trabajaste cuantas horas extras: "));
+    const pagosHora = Number(prompt("cuanto te pagan por hora:"));
+
+    const horaMes = horas * 30;
+    const totalHorasTrabajada = horaMes + horaExtras;
+    const valorHoraTotal = pagosHora * totalHorasTrabajada;
+
+    let pension = valorHoraTotal * 5 / 100;
+    let salud = valorHoraTotal * 4 / 100;
+    let salarioNetoDescuento = valorHoraTotal - pension - salud;
+
+    resultado.textContent = (
+        `${horas}h al dia
+        +  ${horaExtras}h extra,
+        pagos por hora ${pagosHora}
+        en total trabajaste ${totalHorasTrabajada} horas
+        y ganaste ${valorHoraTotal}$ cop.
+        - salud 4% y pension 5%,
+        pension  ${pension}$ cop + salud ${salud}$ cop,
+        el ingreso neto es ${salarioNetoDescuento}$ cop
+        `);
+};
+
+function calculo_precio_iva() {
+    let preceProduct = Number(prompt("porfavor agrege el precio del producto"));
+    let iva = 19 / 100;
+
+    let preceProductIva = preceProduct + iva;
+    resultado.textContent = (`el valor del producto es ${preceProduct}
+        el iva ha agregar ${iva} %
+        total producto + iva ${preceProductIva}
+        `)
+};
+
+function calculo_alumno() {
+    let boy = Number(prompt("ingrese el numero de estudiantes del genero masculino"));
+    let girl = Number(prompt("ingrese el numero de estudiantes del genero femenido"));
+
+    let alumnos = boy + girl;
+
+    let percentageBoy = boy / alumnos;
+    let percentageGirl = girl / alumnos;
+
+    let percentageBoyFinal = percentageBoy * 100;
+    let percentagegirlFinal = percentageGirl * 100;
+
+    resultado.textContent = (`el total de alumnos es ${alumnos}
+        el numero de hombre es ${boy} en promedio ${percentageBoyFinal}%
+        el numero de mujeres es ${girl} en promedio ${percentagegirlFinal}%
+        `)
+};
+
+function calculo_area_triangulo() {
+    let numero1 = Number(prompt("porfavor ingrese el primer numero"));
+    let numero2 = Number(prompt("ingrese el segundo numero"));
+
+    resultado.textContent = ("el area del triangulo es: " + ((numero1 * numero2) / 2));
+};
+
+function calculo_promedio_notas() {
+    let nota1 = Number(prompt("ingrese la nota"));
+    let nota2 = Number(prompt("ingrese la nota"));
+    let nota3 = Number(prompt("ingrese la nota"));
+
+    let promedio = (nota1 + nota2 + nota3) / 3;
+    resultado.textContent = ("el promedio de la nota del alumno es: " + promedio)
+};
+ */
+/* 
+___________________
+___| TALLER 4 |____
+___________________
+*/
+
+
+
 
 /* 1: superficie_del_rectangulo */
 function superficie_del_rectangulo() {
@@ -809,8 +1166,35 @@ botonAgregar.addEventListener('click', () => {
     }
 });
 
+
+/* 
+___________________
+___| limpiar |____
+___________________
+*/
+
+function limpiar_salida_taller_4() {
+    contenedorLista.innerHTML = "";
+};
+function limpiar_salida_taller_1() {
+    resultado.innerHTML = "";
+};
+
 // Event Delegation para eliminar formularios
 contenedorLista.addEventListener('click', (e) => {
+    if (e.target.classList.contains('boton_eliminar')) {
+        if (confirm('¿Estás seguro de eliminar este formulario?')) {
+            const formId = e.target.getAttribute('data-form-id');
+            const formulario = document.getElementById(formId);
+            if (formulario) {
+                formulario.remove();
+                console.log(`Formulario ${formId} eliminado`);
+            }
+        }
+    }
+});
+// Event Delegation para eliminar formularios
+resultado.addEventListener('click', (e) => {
     if (e.target.classList.contains('boton_eliminar')) {
         if (confirm('¿Estás seguro de eliminar este formulario?')) {
             const formId = e.target.getAttribute('data-form-id');
